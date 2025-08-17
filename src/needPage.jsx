@@ -2,9 +2,13 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import forwardBtn from "./media/forwardBtn.svg";
 import backwardBtn from "./media/backwardBtn.svg";
+import closeBtn from "./media/close.svg";
 
 const NeedsPage = () => {
   const [needs, setNeeds] = useState([]);
+  const [needPopup, setNeedPopup] = useState(false);
+  const [needText, setNeedText] = useState(" ");
+  const [activeNeedId, setActiveNeedId] = useState(null);
   const navigate = useNavigate();
 
   // getting the info
@@ -21,6 +25,18 @@ const NeedsPage = () => {
       .catch((err) => console.error("Fetch error:", err));
   }, []);
 
+  const handleNeedClick = (need) => {
+    setNeedPopup(true);
+    setNeedText(need.text);
+    setActiveNeedId(need.id);
+
+  }
+  
+  const handleNeedClose = () => {
+    setNeedPopup(false);
+    setActiveNeedId(null); // reset
+  }
+
   //moving forwad and backwards
   const handleForward = () => {
     navigate("/need-page");
@@ -32,10 +48,17 @@ const NeedsPage = () => {
 
   return (
     <div className="needs-page">
+      {needPopup && (
+        <div className="need-popup">
+          <img src= {closeBtn} alt="close" className="close-btn" onClick={handleNeedClose}/>
+          <p className="text" id="need-text"> {needText} </p>
+        </div>
+      )}
+
         {/* things to know */}
         <ul className="things-to-know">
             {needs.map((need) => (
-            <li className = "need-box" key={need.id}> {need.title} </li>
+            <li className = "need-box" id={need.id} onClick={() => handleNeedClick(need)} disabled={needPopup && activeNeedId !== need.id}> {need.title} </li>
           ))}
         </ul>
 

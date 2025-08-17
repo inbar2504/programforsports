@@ -199,7 +199,7 @@ body {
   transform: translateY(-50%); /* center vertically */
   width: 16px;  /* image size */
   height: 16px;
-  background-image: url('media/bullet.svg'); /* <-- your image path */
+  background-image: url('media/bullet.svg'); 
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -225,27 +225,57 @@ body {
   transform: translateX(-50%);
 }
 
+.things-to-know {
+  color: white;
+  font-size: clamp(1.3rem, 2vw, 3rem);
+  list-style: none;
+  text-align: center;
+  padding-right: 0px;
+}
+
 .needs-page {
+  
   width: 100vw;
   height: 100vh;
   background-image: url("media/regularBg.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
+
+  display: flex;
+  flex-direction: column;   /* stack boxes vertically */
+  justify-content: center;  /* center vertically */
+  align-items: center;      /* center horizontally */
 }
 
 .need-box {
   background-image: url("media/needBox.svg");
   background-repeat: no-repeat;
   background-position: center;
-  width: 75%;
-  height: 1%;
-  margin-bottom: 0rem;
+  background-size: 100% 100%;
 
+  width: 70%;
+  padding: clamp(1.5rem, 2vw, 3rem) clamp(2.5rem, 3vw, 5rem) ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.things-to-know {
-  color: white;
-  font-size: clamp(1.8rem, 2vw, 4rem);
-  list-style: none;
+.need-popup {
+  display: block;
+  position: absolute;
+  width: 50%;
+  padding: 2.5rem 2rem 4rem 2rem;
+  height: auto;
+  background-color: #333333;
+  border: 2px solid white;
+}
+
+#need-text {
   text-align: center;
+}
+
+.close-btn {
+  margin-bottom: clamp(1.5rem, 2vh, 3rem);
+  width: clamp(1.5rem, 3vw, 4rem);
 }

@@ -15,7 +15,7 @@ const ImportantNotes = () => {
     fetch(import.meta.env.BASE_URL + 'data/db.json')
       .then((res) => res.json())
       .then((data) => {
-        setNotes(data["imporatant-notes"]); 
+        setNotes(data["imporatant-notes"]); // data is an array
         console.log("Fetched notes:", data);
       })
       .catch((err) => console.error("Fetch error:", err));
