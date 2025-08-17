@@ -12,7 +12,7 @@ const ImportantNotes = () => {
 
   // making the popup appear for the first time the user opens the app
   useEffect(() => {
-    fetch("import.meta.env.BASE_URL + 'data/db.json'")
+    fetch(import.meta.env.BASE_URL + 'data/db.json')
       .then((res) => res.json())
       .then((data) => {
         setNotes(data); // data is an array

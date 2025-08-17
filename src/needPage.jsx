@@ -9,7 +9,7 @@ const NeedsPage = () => {
 
   // getting the info
   useEffect(() => {
-    fetch("import.meta.env.BASE_URL + 'data/db.json'")
+    fetch(import.meta.env.BASE_URL + 'data/db.json')
       .then((res) => {
         if (!res.ok) throw new Error("Network response was not ok");
         return res.json();
