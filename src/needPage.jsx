@@ -15,7 +15,7 @@ const NeedsPage = () => {
         return res.json();
       })
       .then((data) => {
-        setNeeds(data);
+        setNeeds(data["needs-texts"]);
         console.log(needs);
       })
       .catch((err) => console.error("Fetch error:", err));
