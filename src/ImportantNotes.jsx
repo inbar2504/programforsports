@@ -12,7 +12,7 @@ const ImportantNotes = () => {
 
   // making the popup appear for the first time the user opens the app
   useEffect(() => {
-    fetch("http://localhost:8000/imporatant-notes")
+    fetch("/data/db.json")
       .then((res) => res.json())
       .then((data) => {
         setNotes(data); // data is an array

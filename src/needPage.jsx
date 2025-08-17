@@ -9,7 +9,7 @@ const NeedsPage = () => {
 
   // getting the info
   useEffect(() => {
-    fetch("http://localhost:8000/needs-texts")
+    fetch("/data/db.json")
       .then((res) => {
         if (!res.ok) throw new Error("Network response was not ok");
         return res.json();
