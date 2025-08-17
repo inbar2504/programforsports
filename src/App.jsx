@@ -1,8 +1,8 @@
-import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import StartPage from "./startPage";
 import ImportantNotes from "./ImportantNotes";
 import NeedsPage from "./needPage";
+import "./App.css";
 
 function App() {
   return (
