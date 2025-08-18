@@ -224,14 +224,22 @@ body {
   transform: translateX(-50%);
 }
 
+.page-content {
+  display: flex;
+  flex-direction: column;   
+  /* justify-content: center;   */
+  align-items: center;     
+  width: 100%;
+  height: 100%;            
+}
+
 .things-to-know {
-  position: absolute;
-  bottom: 15vh;
+  display: flex;
+  flex-direction: column;  
+  gap: 0rem;
   color: white;
   font-size: clamp(1.3rem, 2vw, 3rem);
-  list-style: none;
   text-align: center;
-  padding-right: 0px;
 }
 
 .needs-page {
@@ -240,12 +248,7 @@ body {
   background-image: url("media/regularBg.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  
 
-  display: flex;
-  flex-direction: column; 
-  justify-content: center; 
-  align-items: center; 
 }
 
 .need-box {
@@ -282,23 +285,22 @@ body {
   width: clamp(1.5rem, 3vw, 4rem);
 }
 
-@media (min-width: 375px) and (max-width: 376px){
-  /* iPhone SE width */
-  .things-to-know {
-    position: absolute;       /* keep absolute if needed */
-    bottom: 5vh;             /* smaller bottom spacing for SE */
-    font-size: clamp(1.2rem, 2vw, 2.5rem);
-  }
-}
-
 .page-header {
-  position: absolute;
+  padding-top: 3vh;
   display: flex;
   flex-direction: column; 
   align-items: center;
-  padding-right: 5%;
-  top: 3vh;
+  margin-bottom: 5rem;     
 }
+
+@media (min-width: 375px) and (max-width: 376px){
+  /* iPhone SE width */
+  .page-header {
+    margin-bottom: 4rem;
+  }
+}
+
+
 
 #page-title {
   font-size: clamp(2rem, 3vh, 4rem);
@@ -307,3 +309,4 @@ body {
 #small-message {
   font-size: clamp(1rem, 1.5vh, 1.5rem);
 }
+
