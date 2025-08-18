@@ -252,6 +252,7 @@ body {
 }
 
 .need-box {
+  z-index: 1;
   background-image: url("media/needBox.svg");
   background-repeat: no-repeat;
   background-position: center;
