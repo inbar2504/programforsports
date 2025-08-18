@@ -226,7 +226,7 @@ body {
 
 .things-to-know {
   position: absolute;
-  bottom: 15vh;
+  bottom: 10vh;
   color: white;
   font-size: clamp(1.3rem, 2vw, 3rem);
   list-style: none;
