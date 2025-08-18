@@ -269,6 +269,9 @@ body {
   z-index: 1;
   display: block;
   position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 50%;
   padding: 2.5rem 2rem 4rem 2rem;
   height: auto;
