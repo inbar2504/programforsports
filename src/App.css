@@ -302,6 +302,9 @@ body {
   .page-header {
     margin-bottom: 4rem;
   }
+  .need-popup{
+  padding: 1.5rem 2rem 2rem 2rem;
+  }
 }
 
 
