@@ -226,7 +226,7 @@ body {
 
 .things-to-know {
   position: absolute;
-  bottom: 10vh;
+  bottom: 15vh;
   color: white;
   font-size: clamp(1.3rem, 2vw, 3rem);
   list-style: none;
@@ -286,7 +286,7 @@ body {
   /* iPhone SE width */
   .things-to-know {
     position: absolute;       /* keep absolute if needed */
-    bottom: 60px;             /* smaller bottom spacing for SE */
+    bottom: 5vh;             /* smaller bottom spacing for SE */
     font-size: clamp(1.2rem, 2vw, 2.5rem);
   }
 }
