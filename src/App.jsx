@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import StartPage from "./startPage";
 import ImportantNotes from "./ImportantNotes";
 import NeedsPage from "./needPage";
@@ -6,7 +6,7 @@ import "./App.css";
 
 function App() {
   return (
-    <Router basename="/programforsports/">
+    <Router basename="/">
       <div className="App">
         <header className="App-Content">
           <Routes>
