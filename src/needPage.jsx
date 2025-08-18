@@ -13,7 +13,7 @@ const NeedsPage = () => {
 
   // getting the info
   useEffect(() => {
-    fetch(import.meta.env.BASE_URL + 'data/db.json')
+    fetch(import.meta.env.BASE_URL + "data/db.json")
       .then((res) => {
         if (!res.ok) throw new Error("Network response was not ok");
         return res.json();
@@ -29,13 +29,12 @@ const NeedsPage = () => {
     setNeedPopup(true);
     setNeedText(need.text);
     setActiveNeedId(need.id);
+  };
 
-  }
-  
   const handleNeedClose = () => {
     setNeedPopup(false);
     setActiveNeedId(null); // reset
-  }
+  };
 
   //moving forwad and backwards
   const handleForward = () => {
@@ -50,24 +49,50 @@ const NeedsPage = () => {
     <div className="needs-page">
       {needPopup && (
         <div className="need-popup">
-          <img src= {closeBtn} alt="close" className="close-btn" onClick={handleNeedClose}/>
-          <p className="text" id="need-text"> {needText} </p>
+          <img
+            src={closeBtn}
+            alt="close"
+            className="close-btn"
+            onClick={handleNeedClose}
+          />
+          <p className="text" id="need-text">
+            {" "}
+            {needText}{" "}
+          </p>
         </div>
       )}
-
-        {/* things to know */}
-        <ul className="things-to-know">
-            {needs.map((need) => (
-            <li className = "need-box" id={need.id} onClick={() => handleNeedClick(need)} disabled={needPopup && activeNeedId !== need.id}> {need.title} </li>
-          ))}
-        </ul>
+      <div className="page-header">
+        <div className="text" id="page-title">על מה נדרש להקפיד</div>
+        <div className="text" id="small-message">לחץ לפירוט</div>
+      </div>
+      {/* things to know */}
+      <ul className="things-to-know">
+        {needs.map((need) => (
+          <li
+            className="need-box"
+            key={need.id}
+            onClick={() => {
+              if (activeNeedId === null) {
+                handleNeedClick(need);
+              }
+            }}
+          >
+            {" "}
+            {need.title}{" "}
+          </li>
+        ))}
+      </ul>
 
       {/* buttons */}
       <div className="buttons-move">
         <img
           src={forwardBtn}
           alt="continue"
-          onClick={handleForward}
+          onClick={() => {
+            if (activeNeedId === null) {
+              handleForward();
+            }
+          }}
           className="move-button"
           id="forward-btn"
         />
@@ -75,7 +100,11 @@ const NeedsPage = () => {
         <img
           src={backwardBtn}
           alt="continue"
-          onClick={handleBackward}
+          onClick={() => {
+            if (activeNeedId === null) {
+              handleBackward();
+            }
+          }}
           className="move-button"
           id="backward-btn"
         />

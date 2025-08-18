@@ -290,3 +290,20 @@ body {
     font-size: clamp(1.2rem, 2vw, 2.5rem);
   }
 }
+
+.page-header {
+  position: absolute;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  padding-right: 5%;
+  top: 3vh;
+}
+
+#page-title {
+  font-size: clamp(2rem, 3vh, 4rem);
+}
+
+#small-message {
+  font-size: clamp(1rem, 1.5vh, 1.5rem);
+}
