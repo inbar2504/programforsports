@@ -331,7 +331,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 80vh;
-  
+  position: relative; /* anchor the buttons here */
 }
 
 .swiper .swiper-slide {
@@ -364,13 +364,16 @@ body {
 .swiper-button-prev-custom,
 .swiper-button-next-custom {
   position: absolute;
-  width: 10%;   
-  height: 5%;  
-  background-repeat: no-repeat;
-  background-position: center;
+  top: 50%;                       
+  transform: translateY(-50%);   
+  width: 40px;                   
+  height: 40px;
   border: none;
   cursor: pointer;
-  background: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;  
 }
 
 button:focus {
@@ -395,6 +398,14 @@ button:focus {
   background-size: 100% 100%;
 }
 
+.swiper-button-prev-custom:disabled{
+  opacity: 0.5;
+}
+
+.swiper-button-next-custom:disabled{
+  opacity: 0.5;
+}
+
 @media (min-width: 375px) and (max-width: 376px){
   /* iPhone SE width */
   .page-header {
@@ -405,7 +416,7 @@ button:focus {
   }
 }
 
-#slides-page-title {
+.slides-page-title {
   padding-top: 5%;
   text-align: center;
   padding-bottom: 10%;
