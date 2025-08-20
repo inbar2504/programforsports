@@ -56,6 +56,7 @@ const SlidesPage = () => {
 
   return (
     <div className="slides-page-content">
+      <div className="text" id="slides-page-title">המלצות תזונתיות</div>
       <div className="slider-content">
         {/* Navigation buttons */}
         <button className="swiper-button-prev-custom"></button>

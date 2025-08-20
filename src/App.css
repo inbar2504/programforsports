@@ -247,7 +247,6 @@ body {
   background-image: url("media/regularBg.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-
 }
 
 .need-box {
@@ -331,7 +330,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 80vh;
+  
 }
 
 .swiper .swiper-slide {
@@ -361,18 +361,20 @@ body {
   margin-bottom: 0.5rem;
 }
 
-
-
 .swiper-button-prev-custom,
 .swiper-button-next-custom {
   position: absolute;
-  width: 10%;   /* make sure it has width */
-  height: 5%;  /* and height */
+  width: 10%;   
+  height: 5%;  
   background-repeat: no-repeat;
   background-position: center;
   border: none;
   cursor: pointer;
   background: none;
+}
+
+button:focus {
+  -webkit-tap-highlight-color: transparent; /* iOS & Android */
 }
 
 .swiper-button-next-custom {
@@ -402,3 +404,23 @@ body {
     height: 48vh;
   }
 }
+
+#slides-page-title {
+  padding-top: 5%;
+  text-align: center;
+  padding-bottom: 10%;
+  font-size: clamp(3rem, 3vh, 4.5rem);
+
+}
+
+.slides-page-content {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("media/regularBg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+
