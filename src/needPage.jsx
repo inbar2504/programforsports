@@ -63,10 +63,10 @@ const NeedsPage = () => {
       )}
       <div className="page-content">
         <div className="page-header">
-          <div className="text" id="page-title">
+          <div className="text page-title">
             על מה נדרש להקפיד
           </div>
-          <div className="text" id="small-message">
+          <div className="text small-message">
             לחץ לפירוט
           </div>
         </div>

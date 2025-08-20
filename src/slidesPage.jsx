@@ -47,7 +47,7 @@ const SlidesPage = () => {
   }, []);
 
   const handleForward = () => {
-    navigate("/slides-page");
+    navigate("/start-programs");
   };
 
   const handleBackward = () => {
