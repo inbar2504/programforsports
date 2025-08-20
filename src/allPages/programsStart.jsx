@@ -1,6 +1,7 @@
-import forwardBtn from "./media/forwardBtn.svg";
-import backwardBtn from "./media/backwardBtn.svg";
+import forwardBtn from "../media/forwardBtn.svg";
+import backwardBtn from "../media/backwardBtn.svg";
 import { useNavigate } from "react-router-dom";
+import actualSchooLogo from "../media/school.svg";
 
 const ProgramPage = () => {
   const navigate = useNavigate();
@@ -10,11 +11,17 @@ const ProgramPage = () => {
   };
 
   const handleBackward = () => {
-    navigate(-1);
+    navigate("/slides-page");
   };
 
   return (
     <div className="all-content-programs">
+      <img
+        src={actualSchooLogo}
+        alt="schoolLogo"
+        className="logo"
+        id="school-logo"
+      />
       <div className="programs-page-content">
         <div className="programs-page-header">
           <div className="text page-title">יאללה, לעבודה!</div>
@@ -24,7 +31,14 @@ const ProgramPage = () => {
         {/* things to know */}
         <div className="programs">
           <div className="program-sports">
-            <p className="program-text">תוכנית אימונים ריצה</p>
+            <p
+              className="program-text"
+              onClick={() => {
+                navigate("/running-program");
+              }}
+            >
+              תוכנית אימונים ריצה
+            </p>
           </div>
           <div className="program-sports">
             <p className="program-text">תוכנית אימונים כוח</p>
@@ -53,6 +67,7 @@ const ProgramPage = () => {
             }}
             className="move-button"
             id="forward-btn"
+            style={{ visibility: "hidden" }}
           />
 
           <img

@@ -1,22 +1,23 @@
-import forwardBtn from "./media/forwardBtn.svg";
+import forwardBtn from "../media/forwardBtn.svg";
 import { useState, useEffect } from "react";
-import backwardBtn from "./media/backwardBtn.svg";
+import backwardBtn from "../media/backwardBtn.svg";
 import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+import actualSchooLogo from "../media/school.svg";
 import "swiper/css";
 import "swiper/css/navigation";
 
 // importing images
-import schedule from "./media/icons/schedule.svg";
-import meal from "./media/icons/meal.svg";
-import sandwich from "./media/icons/sandwich.svg";
-import weight from "./media/icons/weight.svg";
-import calcium from "./media/icons/calcium.svg";
-import iron from "./media/icons/bloodCells.svg";
-import vegan from "./media/icons/vegan.svg";
-import fruitsVegies from "./media/icons/fruitsVegies.svg";
-import water from "./media/icons/water.svg";
+import schedule from "../media/icons/schedule.svg";
+import meal from "../media/icons/meal.svg";
+import sandwich from "../media/icons/sandwich.svg";
+import weight from "../media/icons/weight.svg";
+import calcium from "../media/icons/calcium.svg";
+import iron from "../media/icons/bloodCells.svg";
+import vegan from "../media/icons/vegan.svg";
+import fruitsVegies from "../media/icons/fruitsVegies.svg";
+import water from "../media/icons/water.svg";
 
 const SlidesPage = () => {
   const navigate = useNavigate();
@@ -51,11 +52,17 @@ const SlidesPage = () => {
   };
 
   const handleBackward = () => {
-    navigate(-1);
+    navigate("/need-page");
   };
 
   return (
     <div className="slides-page-content">
+      <img
+        src={actualSchooLogo}
+        alt="schoolLogo"
+        className="logo"
+        id="school-logo"
+      />
       <div className="text slides-page-title">המלצות תזונתיות</div>
       <div className="slider-content">
         {/* Navigation buttons */}
@@ -64,8 +71,8 @@ const SlidesPage = () => {
         <Swiper
           modules={[Navigation]}
           navigation={{
-            nextEl: '.swiper-button-next-custom',
-            prevEl: '.swiper-button-prev-custom',
+            nextEl: ".swiper-button-next-custom",
+            prevEl: ".swiper-button-prev-custom",
           }}
           spaceBetween={30}
           slidesPerView={1}

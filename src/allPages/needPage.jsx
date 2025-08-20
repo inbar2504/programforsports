@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import forwardBtn from "./media/forwardBtn.svg";
-import backwardBtn from "./media/backwardBtn.svg";
-import closeBtn from "./media/close.svg";
+import forwardBtn from "../media/forwardBtn.svg";
+import backwardBtn from "../media/backwardBtn.svg";
+import closeBtn from "../media/close.svg";
+import actualSchooLogo from "../media/school.svg";
 
 const NeedsPage = () => {
   const [needs, setNeeds] = useState([]);
@@ -42,7 +43,7 @@ const NeedsPage = () => {
   };
 
   const handleBackward = () => {
-    navigate(-1);
+    navigate("/important-note");
   };
 
   return (
@@ -62,13 +63,15 @@ const NeedsPage = () => {
         </div>
       )}
       <div className="page-content">
+        <img
+          src={actualSchooLogo}
+          alt="schoolLogo"
+          className="logo"
+          id="school-logo"
+        />
         <div className="page-header">
-          <div className="text page-title">
-            על מה נדרש להקפיד
-          </div>
-          <div className="text small-message">
-            לחץ לפירוט
-          </div>
+          <div className="text page-title">על מה נדרש להקפיד</div>
+          <div className="text small-message">לחץ לפירוט</div>
         </div>
         {/* things to know */}
         <div className="things-to-know">

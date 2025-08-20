@@ -1,8 +1,7 @@
 import { useState, useEffect} from "react";
-import schoolLogo from "./media/schoolLogo.svg";
-import actualSchooLogo from "./media/school.svg";
-import forwardBtn from "./media/forwardBtn.svg";
-import backwardBtn from "./media/backwardBtn.svg";
+import actualSchooLogo from "../media/school.svg";
+import forwardBtn from "../media/forwardBtn.svg";
+import backwardBtn from "../media/backwardBtn.svg";
 import { useNavigate } from "react-router-dom";
 
 const ImportantNotes = () => {
@@ -36,7 +35,7 @@ const ImportantNotes = () => {
 
   const handleBackward = () => {
     if (showPopup) return;
-    navigate(-1);
+    navigate("/");
   };
 
   // popup functions
@@ -87,7 +86,6 @@ const ImportantNotes = () => {
           </div>
         </div>
       )}
-      <img src={schoolLogo} alt="school-Logo" className="school-Logo" />
       <div className="notes-content">
         <p className="regular-title">דגשים חשובים</p>
         <ul className="all-notes">

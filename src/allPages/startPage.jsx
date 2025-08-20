@@ -1,8 +1,7 @@
-import cat from "./media/cat.svg";
-import kanaf from "./media/kanaf.svg";
-import school from "./media/school.svg";
-import shaldag from "./media/shaldag.svg";
-// import startbtn from "./media/startBtn.svg";
+import cat from "../media/cat.svg";
+import kanaf from "../media/kanaf.svg";
+import school from "../media/school.svg";
+import shaldag from "../media/shaldag.svg";
 
 import { Link } from "react-router-dom";
 

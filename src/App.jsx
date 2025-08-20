@@ -1,10 +1,11 @@
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
-import StartPage from "./startPage";
-import ImportantNotes from "./ImportantNotes";
-import NeedsPage from "./needPage";
+import StartPage from "./allPages/startPage";
+import ImportantNotes from "./allPages/ImportantNotes";
+import NeedsPage from "./allPages/needPage";
 import "./App.css";
-import SlidesPage from "./slidesPage";
-import ProgramPage from "./programsStart"
+import SlidesPage from "./allPages/slidesPage";
+import ProgramPage from "./allPages/programsStart"
+import RunningProgram from "./allPages/runningProgram";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
              <Route path="/need-page" element={<NeedsPage/>} />
              <Route path = "/slides-page" element={<SlidesPage/>} />
              <Route path="/start-programs" element={<ProgramPage/>} />
+             <Route path="/running-program" element={<RunningProgram/>}/>
           </Routes>
           
         </header>

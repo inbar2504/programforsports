@@ -53,10 +53,11 @@ body {
 }
 
 #school-logo {
-  top: 2%;
+  width: 11vw;
+  top: 1%;
   margin: 0px;
   position: absolute;
-  right: 2%;
+  left: 2%;
 }
 
 .text {
@@ -421,11 +422,11 @@ button {
 }
 
 .swiper-button-prev-custom:disabled{
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 .swiper-button-next-custom:disabled{
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 .slides-page-title {
@@ -469,4 +470,31 @@ button {
   .programs-page-header{
     margin-bottom: 5rem; 
   }
+}
+
+.home-btn {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  width: 10vw;
+}
+
+.running-program-page {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("media/homepageBg.png");
+  background-size: 100% 100%;
+}
+
+.middle-text{
+  padding-bottom: 25%;
+}
+
+.running-text{
+  text-align: center;
+}
+
+.text-content{
+  display: flex;
+  flex-direction: column;
 }
