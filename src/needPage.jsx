@@ -38,7 +38,7 @@ const NeedsPage = () => {
 
   //moving forwad and backwards
   const handleForward = () => {
-    navigate("/need-page");
+    navigate("/slides-page");
   };
 
   const handleBackward = () => {

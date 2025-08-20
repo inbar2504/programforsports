@@ -296,15 +296,6 @@ body {
   margin-bottom: 5rem;     
 }
 
-@media (min-width: 375px) and (max-width: 376px){
-  /* iPhone SE width */
-  .page-header {
-    margin-bottom: 4rem;
-  }
-}
-
-
-
 #page-title {
   font-size: clamp(2rem, 3vh, 4rem);
 }
@@ -313,3 +304,101 @@ body {
   font-size: clamp(1rem, 1.5vh, 1.5rem);
 }
 
+.slide {
+  font-family: "aduma-medium";
+  text-align: center;
+  width: 65%;
+  height: 40vh;
+  background-color: white;
+  border: 5px solid #0071bc;
+  border-radius: 50px;
+  padding: 1rem;
+  display: flex;        
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;  
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.slide-title {
+  color: #0071bc;
+  font-size: clamp(2rem, 3vh, 2.5rem);
+  margin-bottom: 10%;
+}
+
+.slider-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.swiper .swiper-slide {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.slide-text{
+  font-size: clamp(1rem, 2vh, 1.5rem);
+  color: #333333;
+}
+
+.slide-icon {
+  width: 10vw;
+}
+
+.page-number{
+  color: #333333;
+  font-size: clamp(1rem, 1vh, 1.5rem);
+}
+
+.slide-bottom {
+  display: flex;
+  justify-content: space-between; /* icon left, page number right */
+  width: 90%;                     /* or whatever fits inside slide */
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+
+
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+  position: absolute;
+  width: 10%;   /* make sure it has width */
+  height: 5%;  /* and height */
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+.swiper-button-next-custom {
+  z-index: 20;
+  top: 50%;
+  transform: translate(-50%);
+  left: 10%;
+  background-image: url("media/slideForward.svg");
+  background-size: 100% 100%;
+}
+
+.swiper-button-prev-custom {
+  z-index: 20;
+  top: 50%;
+  transform: translate(-50%);
+  right: 0%;
+  background-image: url("media/slidesBack.svg");
+  background-size: 100% 100%;
+}
+
+@media (min-width: 375px) and (max-width: 376px){
+  /* iPhone SE width */
+  .page-header {
+    margin-bottom: 4rem;
+  }
+  .slide{
+    height: 48vh;
+  }
+}

@@ -3,6 +3,7 @@ import StartPage from "./startPage";
 import ImportantNotes from "./ImportantNotes";
 import NeedsPage from "./needPage";
 import "./App.css";
+import SlidesPage from "./slidesPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
              <Route path="/" element={<StartPage />} />
              <Route path="/important-note" element={<ImportantNotes />} />
              <Route path="/need-page" element={<NeedsPage/>} />
+             <Route path = "/slides-page" element={<SlidesPage/>} />
           </Routes>
           
         </header>
