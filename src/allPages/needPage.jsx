@@ -77,7 +77,7 @@ const NeedsPage = () => {
         <div className="things-to-know">
           {needs.map((need) => (
             <div
-              className="need-box"
+              className="program-sports"
               key={need.id}
               onClick={() => {
                 if (activeNeedId === null) {
