@@ -225,15 +225,16 @@ body {
   transform: translateX(-50%);
 }
 
-.page-content, .programs-page-content {
+.page-content,
+.programs-page-content {
   display: flex;
-  flex-direction: column;   
-  align-items: center;     
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  height: 100%;            
+  height: 100%;
 }
 
-.all-content-programs{
+.all-content-programs {
   height: 100vh;
   width: 100vw;
   background-image: url("media/regularBg.png");
@@ -241,9 +242,10 @@ body {
   background-size: 100% 100%;
 }
 
-.things-to-know, .programs {
+.things-to-know,
+.programs {
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
   gap: 0rem;
   color: white;
   font-size: clamp(1.3rem, 2vw, 3rem);
@@ -273,7 +275,6 @@ body {
   padding: clamp(1.5rem, 2vw, 3rem) clamp(2.5rem, 3vw, 5rem);
   padding-top: clamp(1rem, 2vh, 3rem);
   padding-bottom: clamp(1rem, 2vh, 3rem);
- 
 }
 
 .need-popup {
@@ -299,13 +300,14 @@ body {
   width: clamp(1.5rem, 3vw, 4rem);
 }
 
-.page-header, .programs-page-header {
+.page-header,
+.programs-page-header {
   padding-top: 3vh;
   padding-right: 5vw;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 5rem;     
+  margin-bottom: 5rem;
 }
 
 .page-title {
@@ -320,15 +322,15 @@ body {
   font-family: "aduma-medium";
   text-align: center;
   width: 65%;
-  height: 40vh;
+  height: 45vh;
   background-color: white;
   border: 5px solid #0071bc;
   border-radius: 50px;
   padding: 1rem;
-  display: flex;        
+  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;  
+  justify-content: space-between;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -352,7 +354,7 @@ body {
   justify-content: center !important;
   align-items: center !important;
 }
-.slide-text{
+.slide-text {
   font-size: clamp(1rem, 2vh, 1.5rem);
   color: #333333;
 }
@@ -361,7 +363,7 @@ body {
   width: 10vw;
 }
 
-.page-number{
+.page-number {
   color: #333333;
   font-size: clamp(1rem, 1vh, 1.5rem);
 }
@@ -369,7 +371,7 @@ body {
 .slide-bottom {
   display: flex;
   justify-content: space-between; /* icon left, page number right */
-  width: 90%;                     /* or whatever fits inside slide */
+  width: 90%; /* or whatever fits inside slide */
   align-items: center;
   margin-bottom: 0.5rem;
 }
@@ -377,25 +379,24 @@ body {
 .swiper-button-prev-custom,
 .swiper-button-next-custom {
   position: absolute;
-  top: 50%;                       
-  transform: translateY(-50%);   
-  width: 40px;                   
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
   height: 40px;
   border: none;
   cursor: pointer;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: transparent;  
+  background-color: transparent;
 }
 
 button:focus {
   -webkit-tap-highlight-color: transparent; /* iOS & Android */
-  
 }
 
 button {
-  background:none;
+  background: none;
   border: none;
 }
 
@@ -421,11 +422,11 @@ button {
   margin-bottom: 10rem;
 }
 
-.swiper-button-prev-custom:disabled{
+.swiper-button-prev-custom:disabled {
   opacity: 0.3;
 }
 
-.swiper-button-next-custom:disabled{
+.swiper-button-next-custom:disabled {
   opacity: 0.3;
 }
 
@@ -433,7 +434,6 @@ button {
   padding-top: 5%;
   text-align: center;
   font-size: clamp(3rem, 3vh, 4.5rem);
-
 }
 
 .slides-page-content {
@@ -451,7 +451,7 @@ button {
   height: 20%;
   background-color: #333333;
   border: 2px solid white;
-  box-shadow: 0px 0px 10px 1px #0071bc ;
+  box-shadow: 0px 0px 10px 1px #0071bc;
 }
 
 .program-text {
@@ -459,16 +459,16 @@ button {
   margin: 0.5rem 2rem;
 }
 
-@media (min-width: 375px) and (max-width: 376px){
+@media (min-width: 375px) and (max-width: 376px) {
   /* iPhone SE width */
   .page-header {
     margin-bottom: 4rem;
   }
-  .slide{
+  .slide {
     height: 48vh;
   }
-  .programs-page-header{
-    margin-bottom: 5rem; 
+  .programs-page-header {
+    margin-bottom: 5rem;
   }
 }
 
@@ -486,15 +486,21 @@ button {
   background-size: 100% 100%;
 }
 
-.middle-text{
+.middle-text {
   padding-bottom: 25%;
 }
 
-.running-text{
+.running-text {
   text-align: center;
 }
 
-.text-content{
+.text-content {
   display: flex;
   flex-direction: column;
+}
+
+.popup-buttons-running{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

@@ -29,7 +29,10 @@ const RunningProgram = () => {
         <div className="bottom-text">
           <p className="text running-text">מומלץ לבצע אותם בהפרשים של לפחות יום אחד מהשני</p>
           <div className="popup-buttons-running">
-            
+            <p className="text blue-text">לחץ לפירוט</p>
+            <button className="running-popup">ריצת רצף</button> 
+            <button className="running-popup">ריצת איכות</button> 
+
           </div>
         </div>
       </div>
