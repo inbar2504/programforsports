@@ -243,7 +243,7 @@ body {
 }
 
 .things-to-know,
-.programs {
+.programs,.all-weeks {
   display: flex;
   flex-direction: column;
   gap: 0rem;
@@ -251,6 +251,10 @@ body {
   font-size: clamp(1.3rem, 2vw, 3rem);
   text-align: center;
   gap: 1.5rem;
+}
+
+.all-weeks{
+  gap:0.7rem;
 }
 
 .needs-page {
@@ -298,13 +302,18 @@ body {
 }
 
 .page-header,
-.programs-page-header {
+.programs-page-header, .weeks-page-header {
   padding-top: 3vh;
   padding-right: 5vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 5rem;
+}
+
+.weeks-page-header {
+  margin-bottom: 1rem;
+  padding-right: 0vw;
 }
 
 .page-title {
@@ -532,4 +541,18 @@ button {
 
 .better-runs-popup{
   width: 80%;
+}
+
+.running-all-weeks {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("media/regularBg.png");
+  background-size: 100% 100%;
+}
+
+.choosing-program-page {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("media/runningPageBg.png");
+  background-size: 100% 100%;
 }

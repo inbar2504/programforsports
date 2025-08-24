@@ -6,6 +6,7 @@ import "./App.css";
 import SlidesPage from "./allPages/slidesPage";
 import ProgramPage from "./allPages/programsStart"
 import RunningProgram from "./allPages/runningProgram";
+import RunningProgramWeeks from "./allPages/runningProgramWeeks";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
              <Route path = "/slides-page" element={<SlidesPage/>} />
              <Route path="/start-programs" element={<ProgramPage/>} />
              <Route path="/running-program" element={<RunningProgram/>}/>
+             <Route path = "/running-program-weeks" element={<RunningProgramWeeks/>}/>
           </Routes>
           
         </header>

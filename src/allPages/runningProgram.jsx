@@ -12,11 +12,13 @@ const RunningProgram = () => {
   const [betterRun, setBetterRun] = useState(false);
 
   const handleForward = () => {
-    console.log("next");
+    if (continuousRun || betterRun) return;
+    navigate("/running-program-weeks");
   };
 
   const handleBackward = () => {
-    navigate(-1);
+    if (continuousRun || betterRun) return;
+    navigate('/start-programs');
   };
 
   return (
@@ -87,7 +89,6 @@ const RunningProgram = () => {
               <button
                 className="running-popup"
                 onClick={() => {
-                  // if {betterRun || continuousRun}
                   setBetterRun(true);
                 }}
               >
@@ -109,6 +110,7 @@ const RunningProgram = () => {
         src={homeBtn}
         className="home-btn"
         onClick={() => {
+          if (continuousRun || betterRun) return;
           navigate("/start-programs");
         }}
       />
