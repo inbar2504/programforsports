@@ -87,7 +87,7 @@ const RunningProgram = () => {
               <button
                 className="running-popup"
                 onClick={() => {
-                  if {betterRun || continuousRun}
+                  // if {betterRun || continuousRun}
                   setBetterRun(true);
                 }}
               >
