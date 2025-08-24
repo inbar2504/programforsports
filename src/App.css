@@ -518,14 +518,18 @@ button {
   box-shadow: 0px 0px 20px 1px  #0071bc;
 }
 
-.running-popup-text{
-  padding-bottom: 5vh;
-}
-
 .running-popup-text, .running-popup-title{
   text-align: center;
 }
 
 .running-popup-title {
   text-decoration: underline;
+}
+
+.running-type{
+  margin-bottom: 1.5vh;
+}
+
+.better-runs-popup{
+  width: 80%;
 }

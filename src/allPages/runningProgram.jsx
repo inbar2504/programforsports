@@ -39,7 +39,27 @@ const RunningProgram = () => {
           </div>
         </div>
       )}
-
+      {betterRun && (
+        <div className="run-popup better-runs-popup">
+          <img
+            src={closeBtn}
+            className="close-btn"
+            onClick={() => {
+              setBetterRun(false);
+            }}
+          />
+          <div className="running-text-content">
+            <div className="text running-popup-title">ריצות איכות:</div>
+            <div className="text running-popup-text">
+              <ul className="better-runs-types">
+                <li className="text running-type">	ריצה מתפתחת- ריצה רצופה המתחילה בקצב קל ומתגברת תוך כדי הריצה עד לסיומה. באימון זה יש לחלק את הריצה ל3 חלקים: חלק ראשון קל (כמו ריצת רצף קלה), חלק שני בינוני, חלק שלישי מהיר.</li>
+                <li className="text running-type">	ריצת שינויי קצב- ריצה רצופה שבה מתבצעים שינויי קצב במהלך הריצה.מבצעים מקטע בקצב מהיר, חוזרים למקטע איטי - התאוששות וחוזרים למקטע מהיר.</li>
+                <li className="text running-type">	.מתגברות בסוף הריצה- קטעי ריצה קצרים (עד 100 מטר) בהם יתורגל קצב ריצה מהי, ביצוע המתגברות יהי באופן הבא: 20 שניות ריצה מתגברת שלאחריה 40 שניות ריצה קלה מאוד</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      )}
       <div className="text-contet">
         <div className="page-header running-header">
           <div className="text page-title">תוכנית אימונים ריצה</div>
@@ -67,7 +87,8 @@ const RunningProgram = () => {
               <button
                 className="running-popup"
                 onClick={() => {
-                  betterRun(true);
+                  if {betterRun || continuousRun}
+                  setBetterRun(true);
                 }}
               >
                 ריצת איכות
