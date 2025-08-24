@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import homeBtn from "../media/homeBtn.svg";
 import actualSchooLogo from "../media/school.svg";
 import { useState } from "react";
-import closeBtn from "../media/close.svg"
+import closeBtn from "../media/close.svg";
 
 const RunningProgram = () => {
   const navigate = useNavigate();
@@ -21,15 +21,21 @@ const RunningProgram = () => {
 
   return (
     <div className="running-program-page">
-      
       {continuousRun && (
         <div className="run-popup">
-          <img src = {closeBtn} className ="close-btn" onClick={() => {
-            setContinuousRun(false);
-          }}/>
+          <img
+            src={closeBtn}
+            className="close-btn"
+            onClick={() => {
+              setContinuousRun(false);
+            }}
+          />
           <div className="running-text-content">
             <div className="text running-popup-title">ריצת רצף:</div>
-            <div className="text running-popup-text">ריצה רצופה בקצב קל ללא שינויי מהירות, ריצה זו צריכה להתבצע בעצימות נמוכה המאפשרת לך לנהל שיחה</div>
+            <div className="text running-popup-text">
+              ריצה רצופה בקצב קל ללא שינויי מהירות, ריצה זו צריכה להתבצע בעצימות
+              נמוכה המאפשרת לך לנהל שיחה
+            </div>
           </div>
         </div>
       )}
@@ -50,12 +56,22 @@ const RunningProgram = () => {
           <div className="popup-buttons-running">
             <p className="text blue-text">לחץ לפירוט</p>
             <div className="running-buttons">
-              <button className="running-popup" onClick={() => {
-                setContinuousRun(true);
-              }}>ריצת רצף</button>
-              <button className="running-popup" onClick={() => {
-                betterRun(true);
-              }}>ריצת איכות</button>
+              <button
+                className="running-popup"
+                onClick={() => {
+                  setContinuousRun(true);
+                }}
+              >
+                ריצת רצף
+              </button>
+              <button
+                className="running-popup"
+                onClick={() => {
+                  betterRun(true);
+                }}
+              >
+                ריצת איכות
+              </button>
             </div>
           </div>
         </div>
