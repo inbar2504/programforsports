@@ -7,10 +7,22 @@ import actualSchooLogo from "../media/school.svg";
 
 const RunningProgramWeeks = () => {
   const navigate = useNavigate();
+
+  //setting the users choices
   const [weeksPrograms, setWeeksPrograms] = useState([]);
+  const [chosenWeek, setChosenWeek] = useState(null);
+  const [chosenProgram, setChosenProgram] = useState(null);
+
+  // different pages
+  const [continuousRunPage, setContinuousRunPage] = useState(false);
+  const [betterRunPage, setBetterRunPage] = useState(false);
   const [weeksPage, setWeeksPage] = useState(true);
   const [chooseProgramPage, setChooseProgramPage] = useState(false);
-  const [chosenWeek, setChosenWeek] = useState(null);
+
+  //timer consts
+  const [timeLeft, setTimeLeft] = useState(0);
+  const [isRunning, setIsRunning] = useState(false);
+  const [currentStep, setCurrentStep] = useState(0);
 
   useEffect(() => {
     fetch(import.meta.env.BASE_URL + "data/db.json")
@@ -24,6 +36,60 @@ const RunningProgramWeeks = () => {
       })
       .catch((err) => console.error("Fetch error:", err));
   }, []);
+
+  useEffect(() => {
+    if (!chosenProgram) return;
+
+    setCurrentStep(0);
+
+    if (Array.isArray(chosenProgram["program-timer"])) {
+      setTimeLeft(chosenProgram["program-timer"][0] * 60);
+    } else {
+      setTimeLeft(chosenProgram["program-timer"] * 60);
+    }
+
+    setIsRunning(false);
+  }, [chosenProgram]);
+
+  // --- Countdown logic ---
+  useEffect(() => {
+    if (!isRunning || timeLeft <= 0) return;
+
+    const interval = setInterval(() => {
+      setTimeLeft((prev) => {
+        if (prev <= 1) {
+          clearInterval(interval);
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [isRunning, timeLeft]);
+
+  // --- When timer reaches 0, prepare next step (manual start) ---
+  useEffect(() => {
+  if (!chosenProgram) return;
+  if (timeLeft > 0) return;          // still ticking, do nothing
+  if (currentStep === 0 && !isRunning) return; // ⛔ only block on reset
+
+  if (Array.isArray(chosenProgram["program-timer"])) {
+    const steps = chosenProgram["program-timer"];
+
+    if (currentStep < steps.length - 1) {
+      const nextStep = currentStep + 1;
+      setCurrentStep(nextStep);
+      setTimeLeft(steps[nextStep] * 60);
+      setIsRunning(false); // user must click start again
+    } else {
+      setCurrentStep(steps.length - 1);
+      setTimeLeft(0);
+      setIsRunning(false); // fully finished
+    }
+  }
+}, [timeLeft, chosenProgram, currentStep, isRunning]);
+
   const handleForward = () => {
     console.log("next");
   };
@@ -50,7 +116,7 @@ const RunningProgramWeeks = () => {
             {weeksPrograms.map((week) => {
               return (
                 <div
-                  className="program-sports"
+                  className="week-select"
                   key={week.week}
                   onClick={() => {
                     setChosenWeek(week);
@@ -69,10 +135,83 @@ const RunningProgramWeeks = () => {
       {chooseProgramPage && (
         <div className="choosing-program-page">
           <div className="choosing-programs-header">
-            <div className="page-header running-header">
+            <div className="running-header">
               <div className="text page-title">תוכנית אימונים ריצה</div>
               <div className="text small-message">{chosenWeek.week}</div>
             </div>
+          </div>
+          <div className="program-buttons ">
+            <button
+              className="running-popup"
+              onClick={() => {
+                setChosenProgram(chosenWeek.runningPrograms[0]);
+                setContinuousRunPage(true);
+                setChooseProgramPage(false);
+              }}
+            >
+              {chosenWeek.runningPrograms[0].title}
+            </button>
+
+            <button
+              className="running-popup"
+              onClick={() => {
+                setChosenProgram(chosenWeek.runningPrograms[1]);
+                setBetterRunPage(true);
+                setChooseProgramPage(false);
+              }}
+            >
+              {chosenWeek.runningPrograms[1].title}
+            </button>
+          </div>
+        </div>
+      )}
+
+      {betterRunPage && (
+        <div className="better-run-page">
+          <div className="page-header">
+            <div className="runing-program-week">{chosenWeek.week}</div>
+            <div className="running-program-text">{chosenProgram.title}</div>
+          </div>
+          <div className="page-middle">
+            {chosenProgram["program-details"].map((detail) => (
+              <div className="text">{detail}</div>
+            ))}
+            <div className="timer text">
+              {Math.floor(timeLeft / 60).toString().padStart(2, "0")}:
+              {(timeLeft % 60).toString().padStart(2, "0")}
+            </div>
+            <button
+              className="running-popup"
+              onClick={() => setIsRunning(true)}
+              disabled={isRunning}
+            >
+              הפעל טיימר
+            </button>
+          </div>
+        </div>
+      )}
+
+      {continuousRunPage && (
+        <div className="continious-run-page">
+          <div className="page-header">
+            <div className="runing-program-week">{chosenWeek.week}</div>
+            <div className="running-program-text">{chosenProgram.title}</div>
+          </div>
+          <div className="page-middle">
+            <div className="text">{chosenProgram["program-details"]}</div>
+            <div className="timer text">
+              {Math.floor(timeLeft / 60)
+                .toString()
+                .padStart(2, "0")}
+              :{(timeLeft % 60).toString().padStart(2, "0")}
+            </div>
+            <button
+              className="running-popup"
+              onClick={() => setIsRunning(true)}
+              disabled={isRunning}
+            >
+              הפעל טיימר
+            </button>
           </div>
         </div>
       )}

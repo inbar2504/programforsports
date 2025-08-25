@@ -63,7 +63,7 @@ const RunningProgram = () => {
         </div>
       )}
       <div className="text-contet">
-        <div className="page-header running-header">
+        <div className="page-header-running-start">
           <div className="text page-title">תוכנית אימונים ריצה</div>
           <div className="text small-message">דגשים</div>
         </div>

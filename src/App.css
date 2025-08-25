@@ -243,18 +243,15 @@ body {
 }
 
 .things-to-know,
-.programs,.all-weeks {
+.programs,
+.all-weeks {
+  z-index: 2;
   display: flex;
   flex-direction: column;
-  gap: 0rem;
   color: white;
   font-size: clamp(1.3rem, 2vw, 3rem);
   text-align: center;
   gap: 1.5rem;
-}
-
-.all-weeks{
-  gap:0.7rem;
 }
 
 .needs-page {
@@ -278,8 +275,9 @@ body {
   padding-bottom: clamp(1rem, 2vh, 3rem);
 }
 
-.need-popup, .run-popup {
-  z-index: 1;
+.need-popup,
+.run-popup {
+  z-index: 20;
   display: block;
   position: absolute;
   left: 50%;
@@ -302,13 +300,25 @@ body {
 }
 
 .page-header,
-.programs-page-header, .weeks-page-header {
+.programs-page-header,
+.weeks-page-header,
+.running-header,
+.page-header-running-start {
   padding-top: 3vh;
   padding-right: 5vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 5rem;
+}
+
+.page-header-running-start {
+  padding-right: 0px;
+}
+
+.running-header {
+  margin-bottom: 10rem;
+  padding-right: 0px;
 }
 
 .weeks-page-header {
@@ -452,7 +462,8 @@ button {
   background-size: 100% 100%;
 }
 
-.program-sports {
+.program-sports,
+.week-select {
   width: 100%;
   height: 20%;
   background-color: #333333;
@@ -460,22 +471,29 @@ button {
   box-shadow: 0px 0px 10px 1px #0071bc;
 }
 
-.program-text {
+.week-select {
+  width: 80%; /* or a fixed size like 300px */
+  max-width: 400px;
+  padding: 0.1rem 2rem;
+}
+
+.all-weeks {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.program-text,
+.need-text {
   text-align: center;
   margin: 0.5rem 2rem;
 }
 
-@media (min-width: 375px) and (max-width: 376px) {
-  /* iPhone SE width */
-  .page-header {
-    margin-bottom: 4rem;
-  }
-  .slide {
-    height: 48vh;
-  }
-  .programs-page-header {
-    margin-bottom: 5rem;
-  }
+.need-text {
+  margin: 0px;
+  padding: 0.3rem;
 }
 
 .home-btn {
@@ -505,14 +523,20 @@ button {
   flex-direction: column;
 }
 
-.popup-buttons-running, .running-buttons{
+.popup-buttons-running,
+.running-buttons,
+.program-buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
 }
 
-.popup-buttons-running{
+.program-buttons {
+  justify-content: center;
+}
+
+.popup-buttons-running {
   gap: 0.5rem;
   padding-top: 5vh;
 }
@@ -524,10 +548,11 @@ button {
   width: 35vw;
   height: 10vh;
   background-color: white;
-  box-shadow: 0px 0px 20px 1px  #0071bc;
+  box-shadow: 0px 0px 20px 1px #0071bc;
 }
 
-.running-popup-text, .running-popup-title{
+.running-popup-text,
+.running-popup-title {
   text-align: center;
 }
 
@@ -535,11 +560,11 @@ button {
   text-decoration: underline;
 }
 
-.running-type{
+.running-type {
   margin-bottom: 1.5vh;
 }
 
-.better-runs-popup{
+.better-runs-popup {
   width: 80%;
 }
 
@@ -550,9 +575,46 @@ button {
   background-size: 100% 100%;
 }
 
-.choosing-program-page {
+.choosing-program-page, .continious-run-page, .better-run-page {
   height: 100vh;
   width: 100vw;
   background-image: url("media/runningPageBg.png");
   background-size: 100% 100%;
+}
+
+.continious-run-page, .page-middle{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timer {
+  font-size: clamp(3rem,3.5vh,4rem);
+}
+
+@media (min-width: 375px) and (max-width: 376px) {
+  /* iPhone SE width */
+  .page-header {
+    margin-bottom: 4rem;
+  }
+  .slide {
+    height: 48vh;
+  }
+  .programs-page-header {
+    margin-bottom: 5rem;
+  }
+  .all-weeks{
+    gap: 0.3rem;
+  }
+}
+
+
+.runing-program-week, .running-program-text{
+  color: white;
+  font-family: "aduma-regular";
+  font-size: clamp(2rem,3vh,3rem);
+}
+
+.running-popup:disabled {
+  opacity: 0.3;
 }
