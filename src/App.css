@@ -478,7 +478,7 @@ button {
 }
 
 .all-weeks {
-  gap: 1rem;
+  gap: 0.4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
