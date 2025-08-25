@@ -116,7 +116,7 @@
     {
       "week": "שבוע 1",
       "id": "week-1",
-      "running-programs": [
+      "runningPrograms": [
         {
           "title": "ריצת רצף",
           "program-timer": 20,
@@ -136,7 +136,7 @@
     {
       "week": "שבוע 2",
       "id": "week-2",
-      "running-programs": [
+      "runningPrograms": [
         {
           "title": "ריצת רצף",
           "program-timer": 25,
@@ -156,7 +156,7 @@
     {
       "week": "שבוע 3",
       "id": "week-3",
-      "running-programs": [
+      "runningPrograms": [
         {
           "title": "ריצת רצף",
           "program-timer": 30,
@@ -178,7 +178,7 @@
     {
       "week": "שבוע 4",
       "id": "week-4",
-      "running-programs": [
+      "runningPrograms": [
         {
           "title": "ריצת רצף",
           "program-timer": 30,
@@ -198,7 +198,7 @@
     {
       "week": "שבוע 5",
       "id": "week-5",
-      "running-programs": [
+      "runningPrograms": [
         {
           "title": "ריצת רצף",
           "program-timer": 35,
@@ -220,7 +220,7 @@
     {
       "week": "שבוע 6",
       "id": "week-6",
-      "running-programs": [
+      "runningPrograms": [
         {
           "title": "ריצת רצף",
           "program-timer": 35,
@@ -240,7 +240,7 @@
     {
       "week": "שבוע 7",
       "id": "week-7",
-      "running-programs": [
+      "runningPrograms": [
         {
           "title": "ריצת רצף",
           "program-timer": 40,
@@ -260,7 +260,7 @@
     {
       "week": "שבוע 8",
       "id": "week-8",
-      "running-programs": [
+      "runningPrograms": [
         {
           "title": "ריצת רצף",
           "program-timer": 40,
@@ -275,6 +275,46 @@
             "8 דק ריצה בקצב בינוני",
             "6 דק ריצה בקצב מהיר",
             "5 דק ריצה בקצב קל מאוד- שחרור"
+          ]
+        }
+      ]
+    },
+    {
+      "week": "שבוע 9",
+      "id": "week-9",
+      "runningPrograms": [
+        {
+          "title": "ריצת רצף",
+          "program-timer": 45,
+          "program-details": "45 דקות רצף קל"
+        },
+        {
+          "title": "ריצת איכות",
+          "program-timer": [10,10,5,3,10],
+          "program-details": [
+            "10 דק חימום ",
+            "10 דק ריצה בקצב בינוני",
+            "5 דק ריצה קלה",
+            "3 דק בקצב חזק",
+            "10 דק שחרור"
+          ]
+        }
+      ]
+    },
+    {
+      "week": "שבוע 10",
+      "id": "week-10",
+      "runningPrograms": [
+        {
+          "title": "ריצת רצף",
+          "program-timer": 0,
+          "program-details": "מדידה עצמאית- 3 ק״מ"
+        },
+        {
+          "title": "ריצת איכות",
+          "program-timer": [40],
+          "program-details": [
+            "40 דק בקצב קל"
           ]
         }
       ]
