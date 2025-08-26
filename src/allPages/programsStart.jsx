@@ -49,7 +49,7 @@ const ProgramPage = () => {
           <div className="program-sports">
             <p className="program-text">מתיחות</p>
           </div>
-          <div className="program-sports">
+          <div className="program-sports" onClick = {() => {navigate("/swimming-program")}}>
             <p className="program-text">שחייה</p>
           </div>
           <div className="program-sports">

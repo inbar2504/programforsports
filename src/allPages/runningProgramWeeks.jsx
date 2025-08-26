@@ -32,7 +32,7 @@ const RunningProgramWeeks = () => {
       })
       .then((data) => {
         setWeeksPrograms(data["running-program"]);
-        console.log("Fetched data:", data["running-program"]); // log here
+        console.log("Fetched data:", data["running-program"]);
       })
       .catch((err) => console.error("Fetch error:", err));
   }, []);
@@ -51,7 +51,7 @@ const RunningProgramWeeks = () => {
     setIsRunning(false);
   }, [chosenProgram]);
 
-  // --- Countdown logic ---
+  //Countdown logic
   useEffect(() => {
     if (!isRunning || timeLeft <= 0) return;
 
@@ -68,36 +68,38 @@ const RunningProgramWeeks = () => {
     return () => clearInterval(interval);
   }, [isRunning, timeLeft]);
 
-  // --- When timer reaches 0, prepare next step (manual start) ---
+  // When timer reaches 0, prepare next step
   useEffect(() => {
-  if (!chosenProgram) return;
-  if (timeLeft > 0) return;          // still ticking, do nothing
-  if (currentStep === 0 && !isRunning) return; // ⛔ only block on reset
+    if (!chosenProgram) return;
+    if (timeLeft > 0) return;
+    if (currentStep === 0 && !isRunning) return;
 
-  if (Array.isArray(chosenProgram["program-timer"])) {
-    const steps = chosenProgram["program-timer"];
+    if (Array.isArray(chosenProgram["program-timer"])) {
+      const steps = chosenProgram["program-timer"];
 
-    if (currentStep < steps.length - 1) {
-      const nextStep = currentStep + 1;
-      setCurrentStep(nextStep);
-      setTimeLeft(steps[nextStep] * 60);
-      setIsRunning(false); // user must click start again
-    } else {
-      setCurrentStep(steps.length - 1);
-      setTimeLeft(0);
-      setIsRunning(false); // fully finished
+      if (currentStep < steps.length - 1) {
+        const nextStep = currentStep + 1;
+        setCurrentStep(nextStep);
+        setTimeLeft(steps[nextStep] * 60);
+        setIsRunning(false); // user must click start again
+      } else {
+        setCurrentStep(steps.length - 1);
+        setTimeLeft(0);
+        setIsRunning(false); // fully finished
+      }
     }
-  }
-}, [timeLeft, chosenProgram, currentStep, isRunning]);
-
-  const handleForward = () => {
-    console.log("next");
-  };
+  }, [timeLeft, chosenProgram, currentStep, isRunning]);
 
   const handleBackward = () => {
     if (chooseProgramPage) {
       setWeeksPage(true);
       setChooseProgramPage(false);
+    } else if (continuousRunPage) {
+      setContinuousRunPage(false);
+      setChooseProgramPage(true);
+    } else if (betterRunPage) {
+      setBetterRunPage(false);
+      setChooseProgramPage(true);
     } else {
       navigate("/running-program");
     }
@@ -177,8 +179,10 @@ const RunningProgramWeeks = () => {
               <div className="text">{detail}</div>
             ))}
             <div className="timer text">
-              {Math.floor(timeLeft / 60).toString().padStart(2, "0")}:
-              {(timeLeft % 60).toString().padStart(2, "0")}
+              {Math.floor(timeLeft / 60)
+                .toString()
+                .padStart(2, "0")}
+              :{(timeLeft % 60).toString().padStart(2, "0")}
             </div>
             <button
               className="running-popup"
@@ -235,7 +239,6 @@ const RunningProgramWeeks = () => {
         <img
           src={forwardBtn}
           alt="continue"
-          onClick={handleForward}
           className="move-button"
           id="forward-btn"
           style={{ visibility: "hidden" }}
