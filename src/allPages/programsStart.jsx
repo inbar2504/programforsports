@@ -52,7 +52,7 @@ const ProgramPage = () => {
           <div className="program-sports" onClick = {() => {navigate("/swimming-program")}}>
             <p className="program-text">שחייה</p>
           </div>
-          <div className="program-sports">
+          <div className="program-sports" onClick = {() => {navigate("/final-score-table")}}>
             <p className="program-text">סף כניסה-בוחן כש''ג</p>
           </div>
         </div>

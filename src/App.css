@@ -319,7 +319,7 @@ body {
 .weeks-page-header,
 .running-header,
 .page-header-running-start,
-.swimming-page-header, .page-header-stretches{
+.swimming-page-header, .page-header-stretches, .score-page-header{
   padding-top: 3vh;
   padding-right: 5vw;
   display: flex;
@@ -338,7 +338,7 @@ body {
   padding-right: 0px;
 }
 
-.running-header, .page-header-stretches  {
+.running-header, .page-header-stretches, .score-page-header {
   margin-bottom: 8rem;
   padding-right: 0px;
 }
@@ -603,12 +603,16 @@ button {
 
 .choosing-program-page,
 .continious-run-page,
-.better-run-page, .stretching-exercies-page {
+.better-run-page, .stretching-exercies-page, .final-score-page {
   height: 100vh;
   width: 100vw;
   background-image: url("media/runningPageBg.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
+}
+
+.final-score-page{
+  background-image: url("media/finalScoreBg.png");
 }
 
 .stretching-exercies-page {
@@ -652,7 +656,9 @@ button {
   .page-header-stretches{
     margin-bottom: 5rem;
   }
-  
+  .score-page-header{
+    margin-bottom: 5rem;
+  }
 }
 
 .runing-program-week,
@@ -698,3 +704,8 @@ button {
   50% {box-shadow: 0px 0px 20px 3px #0071bc;}
   100%{box-shadow: 0px 0px 0px 0px #0071bc  ;}
 }
+
+.score-indicators {
+  width: 85%;
+}
+
