@@ -319,7 +319,7 @@ body {
 .weeks-page-header,
 .running-header,
 .page-header-running-start,
-.swimming-page-header {
+.swimming-page-header, .page-header-stretches{
   padding-top: 3vh;
   padding-right: 5vw;
   display: flex;
@@ -334,11 +334,11 @@ body {
   padding-right: 0vw;
 }
 
-.page-header-running-start {
+.page-header-running-start{
   padding-right: 0px;
 }
 
-.running-header {
+.running-header, .page-header-stretches  {
   margin-bottom: 10rem;
   padding-right: 0px;
 }
@@ -348,7 +348,7 @@ body {
   padding-right: 0vw;
 }
 
-.page-title {
+.page-title, .timer-stretches {
   font-size: clamp(2rem, 3vh, 4rem);
 }
 
@@ -599,18 +599,28 @@ button {
 
 .choosing-program-page,
 .continious-run-page,
-.better-run-page {
+.better-run-page, .stretching-exercies-page {
   height: 100vh;
   width: 100vw;
   background-image: url("media/runningPageBg.png");
   background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.stretching-exercies-page {
+  background-image: url("media/strechingBg.png");
+
 }
 
 .continious-run-page,
-.page-middle {
+.page-middle, .page-middle-stretches{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.page-middle-stretches {
+  gap: 1rem;
 }
 
 .timer {
@@ -635,6 +645,10 @@ button {
     padding-top: 6vh;
     margin-bottom: 5rem;
   }
+  .page-header-stretches{
+    margin-bottom: 5rem;
+  }
+  
 }
 
 .runing-program-week,
@@ -661,4 +675,8 @@ button {
   background-color: #333333;
   border: 2px solid white;
   box-shadow: 0px 0px 15px 2px #0071bc;
+}
+
+.running-popup:disabled {
+  opacity: 0.5;
 }
