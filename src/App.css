@@ -33,6 +33,7 @@ body {
   padding: 0;
   height: 100%;
   width: 100%;
+  overflow-y: scroll;
 }
 
 .logo {
@@ -78,7 +79,7 @@ body {
   text-align: center;
 }
 #start-title {
-  padding-top: 12%;
+  padding-top: 3%;
   padding-left: 30%;
   font-size: clamp(5rem, 6vw, 7rem);
   margin: 0;
