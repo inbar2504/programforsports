@@ -339,7 +339,7 @@ body {
 }
 
 .running-header, .page-header-stretches  {
-  margin-bottom: 10rem;
+  margin-bottom: 8rem;
   padding-right: 0px;
 }
 
@@ -457,7 +457,7 @@ button {
 }
 
 .programs-page-header {
-  margin-bottom: 10rem;
+  margin-bottom: 8rem;
 }
 
 .swiper-button-prev-custom:disabled {
