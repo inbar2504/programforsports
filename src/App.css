@@ -291,7 +291,7 @@ body {
 }
 
 .need-popup,
-.run-popup, .swimming-popup {
+.run-popup, .swimming-popup, .stretch-popup {
   z-index: 20;
   display: block;
   position: absolute;
@@ -574,8 +574,12 @@ button {
 }
 
 .running-popup-text,
-.running-popup-title {
+.running-popup-title, .stretching-popup-text {
   text-align: center;
+}
+
+.stretching-popup-text{
+  margin-bottom: 2rem;
 }
 
 .running-popup-title {
@@ -679,4 +683,18 @@ button {
 
 .running-popup:disabled {
   opacity: 0.5;
+}
+
+.stretch-img {
+  box-shadow: 0px 0px 20px 3px #0071bc;
+  animation-name:stretchImgsAnimation;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+@keyframes stretchImgsAnimation {
+  0% {box-shadow: 0px 0px 0px 0px #0071bc;}
+  50% {box-shadow: 0px 0px 20px 3px #0071bc;}
+  100%{box-shadow: 0px 0px 0px 0px #0071bc  ;}
 }

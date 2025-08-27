@@ -24,12 +24,11 @@ import twinStretch from "../media/stretching/twinStretch.png";
 
 const StretchingProgram = () => {
   const [currPage, setCurrPage] = useState(0);
-  const [stretches, setStretches] = useState([]);
   const navigate = useNavigate();
   const [titles, setTitles] = useState([]);
   const [descs, setDescs] = useState([]);
   const [notes, setNotes] = useState([]);
-  const [totalPages, setTotalPAges] = useState(12);
+  const totalPages= 12;
   const [timerRunning, setTimerRunning] = useState(false);
   const stretchesImages = [
     elbowStretch,
@@ -46,6 +45,8 @@ const StretchingProgram = () => {
     twinStretch,
   ];
   const [timeLefts, setTimeLefts] = useState(Array(totalPages).fill(20));
+  const [popup, setPopup] = useState(false);
+
   useEffect(() => {
     fetch(import.meta.env.BASE_URL + "data/db.json")
       .then((res) => {
@@ -53,7 +54,6 @@ const StretchingProgram = () => {
         return res.json();
       })
       .then((data) => {
-        setStretches(data.stretching);
         const titlesArray = data.stretching.map((item) => item.title);
         const descsArray = data.stretching.map(
           (item) => item["stretch-description"]
@@ -69,12 +69,14 @@ const StretchingProgram = () => {
   }, []);
 
   const handleForward = () => {
+    if (popup) return;
     if (currPage != 11) {
       setCurrPage(currPage + 1);
     }
   };
 
   const handleBackward = () => {
+    if (popup) return;
     if (currPage != 0) {
       setCurrPage(currPage - 1);
     } else {
@@ -99,25 +101,60 @@ const StretchingProgram = () => {
         return newArr;
       });
     }, 1000);
-
     return () => clearInterval(interval); // cleanup if component unmounts
   }, [timerRunning, currPage]);
 
+  useEffect(() => {
+    setTimeLefts((prev) => {
+      const newArr = [...prev];
+      // Only reset if the timer is above 0 (not finished)
+      if (newArr[currPage] === undefined || newArr[currPage] > 0) {
+        newArr[currPage] = 20;
+      }
+      return newArr;
+    });
+    setTimerRunning(false); // stop timer when changing page
+  }, [currPage]);
+
   return (
     <div className="stretching-exercies-page">
+      {popup && (
+        <div className="stretch-popup">
+          <img
+            src={closeBtn}
+            alt="close"
+            className="close-btn"
+            onClick={() => {
+              setPopup(false);
+            }}
+          />
+          <div className="text stretching-popup-text">{descs[currPage]}</div>
+          <div className="text stretching-popup-text">{notes[currPage]}</div>
+        </div>
+      )}
       <div className="page-header-stretches">
         <div className="text page-title">מתיחות</div>
         <div className="text small-message">לחץ לפירוט</div>
       </div>
       <div className="page-middle-stretches">
         <div className="text page-title">{titles[currPage]}</div>
-        <img src={stretchesImages[currPage]} />
+        <img
+          src={stretchesImages[currPage]}
+          alt={titles[currPage]}
+          className="stretch-img"
+          onClick={() => {
+            setPopup(true);
+          }}
+        />
         <div className="text timer-stretches">
           {timeLefts[currPage] > 0 ? `${timeLefts[currPage]} שניות` : "סיימת!"}
         </div>
         <button
           className="running-popup"
-          onClick={() => setTimerRunning(true)}
+          onClick={() => {
+            if (popup) return;
+            setTimerRunning(true)
+          }}
           disabled={timeLefts[currPage] <= 0 || timerRunning}
         >
           הפעל טיימר
@@ -135,6 +172,7 @@ const StretchingProgram = () => {
         src={homeBtn}
         className="home-btn"
         onClick={() => {
+          if (popup) return;
           navigate("/start-programs");
         }}
       />
