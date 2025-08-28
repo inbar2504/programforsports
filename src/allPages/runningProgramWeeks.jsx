@@ -4,6 +4,7 @@ import backwardBtn from "../media/backwardBtn.svg";
 import { useNavigate } from "react-router-dom";
 import homeBtn from "../media/homeBtn.svg";
 import actualSchooLogo from "../media/school.svg";
+import timerNotClicked from "../media/icons/timer.svg";
 
 const RunningProgramWeeks = () => {
   const navigate = useNavigate();
@@ -178,18 +179,19 @@ const RunningProgramWeeks = () => {
             {chosenProgram["program-details"].map((detail) => (
               <div className="text">{detail}</div>
             ))}
-            <div className="timer text">
-              {Math.floor(timeLeft / 60)
-                .toString()
-                .padStart(2, "0")}
-              :{(timeLeft % 60).toString().padStart(2, "0")}
-            </div>
+
             <button
-              className="running-popup"
+              className="running-timer-button"
               onClick={() => setIsRunning(true)}
               disabled={isRunning}
             >
-              הפעל טיימר
+              <div className="text timer-text">
+                {Math.floor(timeLeft / 60)
+                  .toString()
+                  .padStart(2, "0")}
+                :{(timeLeft % 60).toString().padStart(2, "0")}
+              </div>
+              <img src={timerNotClicked} className="timer-icon" />
             </button>
           </div>
         </div>
@@ -203,18 +205,18 @@ const RunningProgramWeeks = () => {
           </div>
           <div className="page-middle">
             <div className="text">{chosenProgram["program-details"]}</div>
-            <div className="timer text">
-              {Math.floor(timeLeft / 60)
-                .toString()
-                .padStart(2, "0")}
-              :{(timeLeft % 60).toString().padStart(2, "0")}
-            </div>
             <button
-              className="running-popup"
+              className="running-timer-button"
               onClick={() => setIsRunning(true)}
               disabled={isRunning}
             >
-              הפעל טיימר
+              <div className="text timer-text">
+                {Math.floor(timeLeft / 60)
+                  .toString()
+                  .padStart(2, "0")}
+                :{(timeLeft % 60).toString().padStart(2, "0")}
+              </div>
+              <img src={timerNotClicked} className="timer-icon" />
             </button>
           </div>
         </div>

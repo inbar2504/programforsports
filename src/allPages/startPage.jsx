@@ -21,8 +21,9 @@ const StartPage = () => {
         <p className="text" id="start-sub-title">
           הכן את גופך בהתאם!
         </p>
-        <p className="text" id = "start-sentance">"המלמד ידיי לקרב אצבעותיי למלחמה"<br></br>תהילים קמ''ד א'</p>
-        <p className="text">מועמד יקר! <br></br>התוכנית המצורפת נבנתה על מנת לאפשר לך<br></br>לקיים הכנה גופנית הולמת לקראת גיוסך ליחידה.<br></br>התוכנית מיועדת ל-10 שבועות טרם הגיוס.</p>
+        <p className="text" id = "start-sentance">"המלמד ידיי לקרב אצבעותיי למלחמה"</p>
+        <p className="text">תהילים קמ''ד א'</p>
+        <p className="text">מועמד יקר! <br></br>התוכנית המצורפת נבנתה על מנת לאפשר לך<br></br>להתכונן גופנית לקראת גיוסך ליחידה.<br></br>התוכנית מיועדת ל-10 שבועות טרם הגיוס.</p>
         <p id = "start-notice">שימו ♥:<br></br>עדיף להגיע למעמד גיוס בכושר גופני פחות טוב<br></br>אך במצב רפואי תקין וללא פציעות משמעותיות</p>
         <Link to = "/important-note" className="start-btn">בואו נתחיל!</Link>
       </div>
