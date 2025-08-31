@@ -101,7 +101,7 @@ const SlidesPage = () => {
         <img
           src={forwardBtn}
           alt="continue"
-          onClick={handleForward}
+          onClick={handleBackward}
           className="move-button"
           id="forward-btn"
         />
@@ -109,7 +109,7 @@ const SlidesPage = () => {
         <img
           src={backwardBtn}
           alt="continue"
-          onClick={handleBackward}
+          onClick={handleForward}
           className="move-button"
           id="backward-btn"
         />

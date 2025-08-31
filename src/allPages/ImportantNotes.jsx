@@ -61,7 +61,7 @@ const ImportantNotes = () => {
         <div className="important-popup">
           <div id="popup-text">
             <p className="text" id="important-text">
-              תוכנית זו נכתבה נכתבה לצורכי מידע כללי בלבד ואינה מהווה תחליף
+              תוכנית זו נכתבה לצורכי מידע כללי בלבד ואינה מהווה תחליף
               לייעוץ אישי או מקצועי. התוכנית אינה אחראית לכל נזק, פציעה או תוצאה
               שתיגרם בעקבות ביצוע התרגלילם או ההמלצות הכלולות בה. האחריות על
               היישום חלה על המתאמן בלבד!
@@ -98,7 +98,7 @@ const ImportantNotes = () => {
           <img
           src={forwardBtn}
           alt="continue"
-          onClick={handleForward}
+          onClick={handleBackward}
           className="move-button"
           id="forward-btn"
         />
@@ -106,7 +106,7 @@ const ImportantNotes = () => {
         <img
           src={backwardBtn}
           alt="continue"
-          onClick={handleBackward}
+          onClick={handleForward}
           className="move-button"
           id="backward-btn"
         />

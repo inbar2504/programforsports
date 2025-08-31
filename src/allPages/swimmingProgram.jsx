@@ -82,18 +82,18 @@ const SwimmingProgram = () => {
       <div className="buttons-move">
         <img
           src={forwardBtn}
-          alt="continue"
-          className="move-button"
-          id="forward-btn"
-          style={{ visibility: "hidden" }}
-        />
-        <img
-          src={backwardBtn}
           alt="back"
           onClick={() => {
             if (popup) return;
             handleBackward();
           }}
+          className="move-button"
+          id="forward-btn"
+        />
+        <img
+          src={backwardBtn}
+          alt="next"
+          style={{ visibility: "hidden" }}
           className="move-button"
           id="backward-btn"
         />

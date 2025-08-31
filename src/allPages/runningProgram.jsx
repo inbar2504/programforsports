@@ -120,7 +120,7 @@ const RunningProgram = () => {
           src={forwardBtn}
           alt="continue"
           onClick={() => {
-            handleForward();
+            handleBackward();
           }}
           className="move-button"
           id="forward-btn"
@@ -130,7 +130,7 @@ const RunningProgram = () => {
           src={backwardBtn}
           alt="continue"
           onClick={() => {
-            handleBackward();
+            handleForward();
           }}
           className="move-button"
           id="backward-btn"

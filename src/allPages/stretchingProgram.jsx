@@ -179,22 +179,23 @@ const StretchingProgram = () => {
       <div className="buttons-move">
         <img
           src={forwardBtn}
-          alt="continue"
-          onClick={() => {
-            handleForward();
-          }}
-          className="move-button"
-          id="forward-btn"
-          style={{ visibility: currPage === 11 ? "hidden" : "visible" }}
-        />
-        <img
-          src={backwardBtn}
           alt="back"
           onClick={() => {
             handleBackward();
           }}
           className="move-button"
+          id="forward-btn"
+        />
+        <img
+          src={backwardBtn}
+          alt="next"
+          onClick={() => {
+            handleForward();
+          }}
+          className="move-button"
           id="backward-btn"
+          style={{ visibility: currPage === 11 ? "hidden" : "visible" }}
+
         />
       </div>
     </div>

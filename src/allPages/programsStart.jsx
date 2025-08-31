@@ -63,21 +63,22 @@ const ProgramPage = () => {
             src={forwardBtn}
             alt="continue"
             onClick={() => {
-              handleForward();
+              handleBackward();
             }}
             className="move-button"
             id="forward-btn"
-            style={{ visibility: "hidden" }}
           />
 
           <img
             src={backwardBtn}
             alt="continue"
             onClick={() => {
-              handleBackward();
+              handleForward();
             }}
             className="move-button"
             id="backward-btn"
+            style={{ visibility: "hidden" }}
+
           />
         </div>
       </div>

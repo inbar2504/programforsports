@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import forwardBtn from "../media/forwardBtn.svg";
-import backwardBtn from "../media/backwardBtn.svg";
+import backwardBtn  from "../media/backwardBtn.svg";
 import closeBtn from "../media/close.svg";
 import actualSchooLogo from "../media/school.svg";
 
@@ -99,7 +99,7 @@ const NeedsPage = () => {
           alt="continue"
           onClick={() => {
             if (activeNeedId === null) {
-              handleForward();
+              handleBackward();
             }
           }}
           className="move-button"
@@ -111,7 +111,7 @@ const NeedsPage = () => {
           alt="continue"
           onClick={() => {
             if (activeNeedId === null) {
-              handleBackward();
+              handleForward();
             }
           }}
           className="move-button"

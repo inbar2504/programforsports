@@ -79,13 +79,12 @@ body {
   text-align: center;
 }
 #start-title {
+  text-align: center;
   padding-top: 3%;
-  padding-left: 30%;
   font-size: clamp(5rem, 6vw, 7rem);
   margin: 0;
 }
 #start-sub-title {
-  padding-right: 10%;
   font-size: clamp(2rem, 3vw, 4rem);
   margin: 0;
 }
@@ -173,21 +172,23 @@ body {
 .notes-content {
   flex-direction: column;
   display: flex;
-  top: 15%;
-  right: 5%;
+  top: 10%;
   position: relative;
+  align-items: center;
 }
 
 .all-notes {
-  padding-right: 5%;
   list-style: none;
   color: white;
   font-size: clamp(1.3rem, 2vw, 3rem);
   width: 70%;
+  padding: 0px;
 }
 
 .regular-title {
-  display: block;
+  display: flex;
+  right: 0px;
+  justify-content: center;
   font-size: clamp(4rem, 5vw, 6rem);
   margin: 0px;
   color: white;
@@ -202,7 +203,7 @@ body {
 .all-notes li::before {
   content: "";
   position: absolute;
-  right: 0;
+  right: 0px;
   top: 0.6em;
   transform: translateY(-50%); /* center vertically */
   width: 16px; /* image size */
@@ -564,7 +565,7 @@ button {
   padding-top: 5vh;
 }
 
-.running-popup {
+.running-popup, .download-btn{
   color: #0071bc;
   font-family: "aduma-medium";
   font-size: clamp(2rem, 3vh, 4rem);
@@ -572,6 +573,12 @@ button {
   height: 10vh;
   background-color: white;
   box-shadow: 0px 0px 20px 1px #0071bc;
+}
+
+.download-btn {
+  width: 20vw;
+  height: 7vh;
+  margin-bottom: 15%;
 }
 
 .running-popup-text,
@@ -636,6 +643,10 @@ button {
   font-size: clamp(3rem, 3.5vh, 4rem);
 }
 
+.score-page-header{
+  margin-bottom: 1rem;
+}
+
 @media (min-width: 375px) and (max-width: 376px) {
   /* iPhone SE width */
   .page-header {
@@ -658,12 +669,15 @@ button {
     margin-bottom: 5rem;
   }
   .score-page-header{
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
   }
   #start-sentance {
   margin-top: 15%;
 
   }
+  .download-btn {
+  margin-bottom: 2%;
+}
 }
 
 .runing-program-week,
@@ -732,10 +746,30 @@ button {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-top: 10vh;
+  margin-top: 2vh;
   background-color: white;
   border-radius: 2rem;
   box-shadow: 0px 0px 20px 5px #0071bc;
   
 }
 
+.page-end{
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.running-timer-button:disabled {
+  background-color: #0071bc;
+  box-shadow: 0px 0px 0px 0px;
+}
+
+.running-timer-button:disabled .timer-text {
+  color: white;
+  text-shadow: 1px 1px 5px black;
+}
+
+.running-timer-button:disabled .timer-icon {
+  content: url("media/icons/timerClicked.svg"); /* swap image */
+}

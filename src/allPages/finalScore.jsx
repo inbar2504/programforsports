@@ -24,8 +24,9 @@ const FinalScorePage = () => {
             <li className="text">הבוחן מתחלק ל3 רמות אותן תעברו במהלך ההכשרה- רמה 2 ללא משקל, רמה 2 עם משקל,רמה 3 עם משקל.</li>
         </ul>
         <a href={table} download="scoreNeededTable.png">
-          <button className="running-popup">הורד</button>
+          <button className="download-btn">הורד</button>
         </a>
+        <iframe width={250} height={150} src="https://www.youtube.com/embed/QZR1Y82OLqw"></iframe>
       </div>
       {/* school log */}
       <img
@@ -48,16 +49,18 @@ const FinalScorePage = () => {
           alt="continue"
           className="move-button"
           id="forward-btn"
-          style={{ visibility: "hidden" }}
+          onClick={() => {
+            handleBackward();
+          }}
         />
         <img
           src={backwardBtn}
           alt="back"
-          onClick={() => {
-            handleBackward();
-          }}
+          
           className="move-button"
           id="backward-btn"
+          style={{ visibility: "hidden" }}
+
         />
       </div>
     </div>
