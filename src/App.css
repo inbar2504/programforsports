@@ -320,14 +320,26 @@ body {
 .programs-page-header,
 .weeks-page-header,
 .running-header,
-.page-header-running-start,
-.swimming-page-header, .page-header-stretches, .score-page-header{
+.page-header-running-start, .page-header-power,
+.swimming-page-header, .page-header-stretches, .score-page-header, .page-header-power-exercises{
   padding-top: 3vh;
   padding-right: 5vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 5rem;
+}
+
+.page-header-power{
+  margin-bottom: 0px;
+}
+
+.power-exercises-notes {
+  width: 87%;
+}
+
+.page-header-power-exercises{
+  margin-bottom: 7rem;
 }
 
 .swimming-page-header {
@@ -358,6 +370,49 @@ body {
   font-size: clamp(1rem, 1.5vh, 1.5rem);
 }
 
+.slides-page {
+  display: flex;
+  justify-content: center; 
+  align-items: center;      
+  height: auto;             
+  min-height: 60vh;        
+  width: 100%;
+  position: relative;       
+  margin-top: 2rem;         
+}
+
+.swiper-wrapper-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.swiper-slide {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+
+}
+
+.slide-power {
+  background-color: white;
+  text-align: center;
+  padding: 0.4rem;
+  border: 2px solid #0071bc;
+  max-width: 300px;   /* fix width for proper swipe */
+  margin: 0 auto;
+  box-shadow: 0px 0px 20px 1px #0071bc;
+}
+
+.slide-power{
+  background-color: white;
+  text-align: center;
+  padding: 0.4rem;
+  border: 2px solid #0071bc;
+
+}
+
 .slide {
   font-family: "aduma-medium";
   text-align: center;
@@ -375,10 +430,14 @@ body {
   overflow: hidden;
 }
 
-.slide-title {
+.slide-title , .slide-title-power{
   color: #0071bc;
   font-size: clamp(2rem, 3vh, 2.5rem);
   margin-bottom: 10%;
+}
+
+.slide-title-power{
+  margin-bottom: 5%;
 }
 
 .slider-content {
@@ -611,12 +670,16 @@ button {
 
 .choosing-program-page,
 .continious-run-page,
-.better-run-page, .stretching-exercies-page, .final-score-page {
+.better-run-page, .stretching-exercies-page, .final-score-page, .power-exercises-start-content {
   height: 100vh;
   width: 100vw;
   background-image: url("media/runningPageBg.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
+}
+
+.power-exercises-start-content {
+  background-image: url("media/powerExercisesBg.png");
 }
 
 .final-score-page{
@@ -629,7 +692,7 @@ button {
 }
 
 .continious-run-page,
-.page-middle, .page-middle-stretches{
+.page-middle, .page-middle-stretches, .power-exercises-start-content{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -645,6 +708,25 @@ button {
 
 .score-page-header{
   margin-bottom: 1rem;
+}
+
+.page-header-power-exercises {
+  text-align: center;
+  margin-bottom: 3rem; /* space before the slider */
+}
+
+.power-arrow-prev{
+  right: 25%;
+}
+
+.power-arrow-next{
+  left: 30%;
+}
+
+
+.slides-power{
+   width: 100%;
+  max-width: 800px;
 }
 
 @media (min-width: 375px) and (max-width: 376px) {
@@ -678,6 +760,7 @@ button {
   .download-btn {
   margin-bottom: 2%;
 }
+
 }
 
 .runing-program-week,

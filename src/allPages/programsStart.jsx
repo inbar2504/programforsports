@@ -40,7 +40,7 @@ const ProgramPage = () => {
               תוכנית אימונים ריצה
             </p>
           </div>
-          <div className="program-sports">
+          <div className="program-sports" onClick = {() => {navigate("/power-exercies-start")}}>
             <p className="program-text">תוכנית אימונים כוח</p>
           </div>
           <div className="program-sports">

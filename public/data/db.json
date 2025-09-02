@@ -381,5 +381,19 @@
       "stretch-description": "הישענות על קיר-לקיחת רגל אחת קדימה ורגל שנייה לאחור ישרה, ידיים נשענות על הקיר.",
       "notes": "ידיים דוחפות את הקיר, מתיחה של רגל אחת בכל פעם."
     }
+  ], 
+  "powerExerciesNotes": [
+    {"id": "firstNote","text": "אימוני הכוח יתמקדו ב-5 תרגילים עיקריים (מתח,מקבילים, שכיבות שמיכה, סקוואט, מכרעים)."},
+    {"id": "secondNote","text": "בכל שבוע יתבצעו 3 אימוני כוח על פי הכתוב בתוכנית."},
+    {"id": "thirdNote","text": "זמני מנוחה- בין תרגיל לתרגיל ביצוע מנוחה של לפחות 2 דקות מלאות."},
+    {"id": "fourthNote","text":"כל התרגילים מתבצעים ללא משקל, במידה ומרגישים שיכולים לשלב משקל יכולים בהתאם לשיקול דעת נכון."},
+    {"id": "fifthNote","text":"באיך לעבוד עם התוכנית? (רלוונטי למתח ומקבילים) אימוני הכוח מתבססים על אחוזים מהמקסימום של מספר חזרות. בדיקת מצב יכולת מירבית (100%) הינו מדבק בו אתה נדרש לבצע מקסימום חזרות על המתח, ממספר החזרות שהצלחת לבצע תוכל לחשב את מספר החזרות הנדרשות לתוכנית."}
+  ],
+  "power-exercises-videos": [
+    {"title": "מתח", "link": "https://drive.google.com/file/d/15OFEDDDBt4d8Q40UiNVJIsy7C7C5i5AF/preview"},
+    {"title": "מקבילים", "link": "https://drive.google.com/file/d/17ppZ8ml1TlOBwFcJ17_wcUN6LYxanWqX/preview"},
+    {"title": "שכיבות שמיכה", "link": "https://drive.google.com/file/d/15erbV_WFaQOpGKFYJ86hQZ-5-Fk8wnls/preview"},
+    {"title": "סקוואט", "link": "https://drive.google.com/file/d/1tHmxLtVWSHmuk_gA9WVc-XOstgpH_Ps9/preview"},
+    {"title": "מכרעים", "link": "https://drive.google.com/file/d/1pfAI4ZH5sJnV6icgcNEjbTUjBwthkMjA/preview"}
   ]
 }
