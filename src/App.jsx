@@ -11,6 +11,7 @@ import SwimmingProgram from "./allPages/swimmingProgram";
 import StretchingProgram from "./allPages/stretchingProgram";
 import FinalScorePage from "./allPages/finalScore";
 import PowerExerciesStart from "./allPages/powerExerciesStart";
+import PowerExercisesWeeks from "./allPages/powerExercisesWeeks";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="/stretching-program" element={<StretchingProgram />} />
             <Route path= "/final-score-table" element={<FinalScorePage/>}/>
             <Route path="/power-exercies-start" element= {<PowerExerciesStart/>}/>
+            <Route path="/power-exercises-weeks" element = {<PowerExercisesWeeks/>}/>
           </Routes>
         </header>
       </div>

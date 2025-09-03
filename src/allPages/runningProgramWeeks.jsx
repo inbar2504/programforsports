@@ -159,7 +159,7 @@ const RunningProgramWeeks = () => {
               <div className="text small-message">{chosenWeek.week}</div>
             </div>
           </div>
-          <div className="program-buttons ">
+          <div className="program-buttons">
             <button
               className="running-popup"
               onClick={() => {

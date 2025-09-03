@@ -28,6 +28,16 @@ const PowerExerciesStart = () => {
       })
       .catch((err) => console.error("Fetch error:", err));
   }, []);
+
+  useEffect(() => {
+    const backFlag = sessionStorage.getItem("powerExercisesPageBack");
+
+    if (backFlag === "true") {
+      setVideoSlides(true); // or whatever state should be triggered
+      sessionStorage.removeItem("powerExercisesPageBack"); // clear it so it won’t trigger again
+    }
+  }, []);
+
   return (
     <div className="power-exercises-start-content">
       {videosSlides && (
@@ -127,6 +137,8 @@ const PowerExerciesStart = () => {
           onClick={() => {
             if (!videosSlides) {
               setVideoSlides(true);
+            } else {
+              navigate("/power-exercises-weeks");
             }
           }}
           className="move-button"
