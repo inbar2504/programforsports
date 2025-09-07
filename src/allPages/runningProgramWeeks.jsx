@@ -95,14 +95,22 @@ const RunningProgramWeeks = () => {
   }, [timeLeft, chosenProgram, currentStep, isRunning]);
 
   useEffect(() => {
-    if (!isRunning) return; // only run when running
+    if (!isRunning) return;
 
     const interval = setInterval(() => {
-      setTimeLeft((prev) => prev + 1); // count up
+      setTimeLeft((prev) => {
+        if (tenthWeek) {
+          // 10th week counts up
+          return prev + 1;
+        } else {
+          // all other programs count down
+          return prev > 0 ? prev - 1 : 0;
+        }
+      });
     }, 1000);
 
-    return () => clearInterval(interval);
-  }, [isRunning]); // don't include timeLeft or tenthWeek here
+  return () => clearInterval(interval);
+}, [isRunning, tenthWeek, continuousRunPage]);
 
   const handleBackward = () => {
     if (chooseProgramPage) {
