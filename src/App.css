@@ -344,10 +344,6 @@ body {
   width: 87%;
 }
 
-.page-header-power-exercises {
-  margin-bottom: 7rem;
-}
-
 .swimming-page-header {
   padding-top: 6vh;
   margin-bottom: 7rem;
@@ -786,7 +782,7 @@ button {
 
 .page-header-power-exercises {
   text-align: center;
-  margin-bottom: 3rem; /* space before the slider */
+  margin-bottom: 2rem; /* space before the slider */
 }
 
 .power-arrow-prev {
