@@ -551,7 +551,7 @@ button {
 }
 
 .programs-page-header {
-  margin-bottom: 8rem;
+  margin-bottom: 4rem;
 }
 
 .swiper-button-prev-custom:disabled {
@@ -802,7 +802,7 @@ button {
   max-width: 800px;
 }
 
-.weeks-page-header, .power-exercises-header {
+.power-exercises-header {
   margin-bottom: 6rem;
 }
 
@@ -840,7 +840,7 @@ button {
   .download-btn {
     margin-bottom: 2%;
   }
-  .weeks-page-header, .power-exercises-header {
+   .power-exercises-header {
     margin-bottom: 4rem;
   }
 }
