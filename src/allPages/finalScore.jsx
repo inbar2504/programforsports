@@ -26,7 +26,7 @@ const FinalScorePage = () => {
         <a href={table} download="scoreNeededTable.png">
           <button className="download-btn">הורד</button>
         </a>
-        <iframe width={250} height={150} src="https://www.youtube.com/embed/QZR1Y82OLqw"></iframe>
+        <iframe width={250} height={150} src="https://www.youtube.com/embed/QZR1Y82OLqw" allowFullScreen></iframe>
       </div>
       {/* school log */}
       <img
