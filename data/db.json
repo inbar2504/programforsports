@@ -625,5 +625,12 @@
         {"exercise-title": "מכרעים", "exercise-notes": "12 חזרות, סט 1"}
       ]}
     ]}
+  ], 
+  "lower-back-stability": [
+    {"exercise-number": ["תרגיל 1- גשר צידי"],"exercise-instructions": ["דרגת קושי 1: שכב על הצד, ברכיים כפופות, הרם אגן מעל לקו האמצע. דרגת קושי 2: רגליים ישרות, הברך לא נוגעת ברצפה. דרגת קושי 3: הרם את הרגל העליונה באוויר תוך כדי שמירת המנח ובצע איתה תנועות קדימה ואחורה כמו תנועות ריצה."] ,"sets-number": ["3"], "repeating-exercise": ["10"], "video": ["https://drive.google.com/file/d/1cawLcYntCtN5_pOa-GgqMDoWjFRtU5fX/preview"]},
+    {"exercise-number": ["תרגיל 2- הרמות אגן", "תרגיל 2- הרמות אגן- דרגת קושי גבוהה"],"exercise-instructions": ["דרגת קושי 1: הרם את האגן למעלה תוך כדי כיווץ ישבנים, מבלי להקשית  את הגב התחתון, והורד אותו באיטיות מטה. דרגת קושי 2: ביצוע דומה עם רגל אחת באוויר"],"sets-number": ["3"], "repeating-exercise": ["15"], "video": ["https://drive.google.com/file/d/1wp70QIxfaU8ZFvBEym0PBotn7NuHqphu/preview", "https://drive.google.com/file/d/1kv3bxg6Z67UxMmmskXOp2QsGAjzguorK/preview"]},
+    {"exercise-number": ["תרגיל 3- שמיכה קדמית- פלאנק"],"exercise-instructions":["דרגת קושי 1: השען על האמות ועל כריות כפות הרגליים. הקפד על הבטן מוכנסת פנימה ואגן בקו הגוף. דרגת קושי 2: הרם רגל אחצת באוויר למשך 2 שניות והורד. החלף רגליים לסירוגין."],"sets-number": ["3"], "repeating-exercise": ["30"], "video": ["https://drive.google.com/file/d/1VnMAzFqnd1Nqv3gMEjIEYv_fPtqpELFq/preview"]},
+    {"exercise-number": ["תרגיל 4- שיווי משקל בעמידת 6"],"exercise-instructions":["12"],"sets-number": ["3"], "repeating-exercise": ["12"], "video": ["https://drive.google.com/file/d/1YC9E9p4RahP40P1ZMM2oVpOSiqkeYR55/preview"]},
+    {"exercise-number": ["תרגיל 5- עמידה על רגל אחת"],"exercise-instructions":["עמוד יציב על רגל אחת. הנף את הרגל שבאוויר קדימה, אחורה, הצידה ובחזרה. דרגת קושי 2: סובב את ראשך לצדדים במהירות או עצום את עיניים."],"sets-number": ["3"], "repeating-exercise": ["1"], "video": ["https://drive.google.com/file/d/1rks3T_YRbGEPhCLdImq63Fvn-wnIu4Rc/preview"]}
   ]
 }
