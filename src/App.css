@@ -327,7 +327,7 @@ body {
 .swimming-page-header,
 .page-header-stretches,
 .score-page-header,
-.page-header-power-exercises, .power-exercises-header {
+.page-header-power-exercises, .power-exercises-header, .stability-page-header {
   padding-top: 3vh;
   padding-right: 5vw;
   display: flex;
@@ -370,9 +370,34 @@ body {
   padding-right: 0vw;
 }
 
+.stability-video {
+  border-radius: 20px;
+  border: 5px solid #0071bc;
+  margin-top: 5vh;
+}
+
+.exercise-number{
+  color: #0071bc;
+  font-size: clamp(2rem,2.5vh,3rem);
+}
+
+.stability-text{
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
+
 .page-title,
-.timer-stretches {
+.timer-stretches, .page-title-stability, .stability-page-title {
   font-size: clamp(2rem, 3vh, 4rem);
+}
+
+.stability-page-title{
+  padding-top: 1rem;
+}
+
+.page-title-stability{
+  text-align: center;
 }
 
 .small-message {
@@ -655,7 +680,7 @@ button {
 }
 
 .running-popup,
-.download-btn {
+.download-btn, .stability-popup {
   color: #0071bc;
   font-family: "aduma-medium";
   font-size: clamp(2rem, 3vh, 4rem);
@@ -663,6 +688,11 @@ button {
   height: 10vh;
   background-color: white;
   box-shadow: 0px 0px 20px 1px #0071bc;
+}
+
+.stability-popup {
+  width: 65vw;
+  height: 14vh;
 }
 
 .download-btn {
@@ -709,12 +739,16 @@ button {
 .better-run-page,
 .stretching-exercies-page,
 .final-score-page,
-.power-exercises-start-content {
+.power-exercises-start-content, .stability-exercises-content, .lower-back-stability-content {
   height: 100vh;
   width: 100vw;
   background-image: url("media/runningPageBg.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
+}
+
+.stability-exercises-content, .lower-back-stability-content{
+  background-image: url("media/stabilityBg.png");
 }
 
 .power-exercises-start-content {
@@ -732,7 +766,7 @@ button {
 .continious-run-page,
 .page-middle,
 .page-middle-stretches,
-.power-exercises-start-content {
+.power-exercises-start-content, .stability-page-middle , .lower-back-stability-content{
   display: flex;
   flex-direction: column;
   align-items: center;

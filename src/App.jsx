@@ -12,6 +12,8 @@ import StretchingProgram from "./allPages/stretchingProgram";
 import FinalScorePage from "./allPages/finalScore";
 import PowerExerciesStart from "./allPages/powerExerciesStart";
 import PowerExercisesWeeks from "./allPages/powerExercisesWeeks";
+import StabilityExercises from "./allPages/stabilityExercises";
+import LowerBackStability from "./allPages/lowerBackStability";
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
             <Route path= "/final-score-table" element={<FinalScorePage/>}/>
             <Route path="/power-exercies-start" element= {<PowerExerciesStart/>}/>
             <Route path="/power-exercises-weeks" element = {<PowerExercisesWeeks/>}/>
+            <Route path = "/stability-exercises" element= {<StabilityExercises/>}/>
+            <Route path="/lower-back-stability" element={<LowerBackStability/>}/>
           </Routes>
         </header>
       </div>
