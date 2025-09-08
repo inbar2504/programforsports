@@ -7,7 +7,7 @@ import actualSchooLogo from "../media/school.svg";
 import homeBtn from "../media/homeBtn.svg";
 import { useNavigate } from "react-router-dom";
 
-const LowerBackStability = () => {
+const ShouldersStability = () => {
   const [exercises, setExercises] = useState([]);
   const [currExercise, setCurrExercise] = useState(0);
   const [popup, setPopup] = useState(false);
@@ -21,8 +21,8 @@ const LowerBackStability = () => {
         return res.json();
       })
       .then((data) => {
-        setExercises(data["lower-back-stability"]);
-        console.log("Fetched data:", data["lower-back-stability"]);
+        setExercises(data["shoulder-stability"]);
+        console.log("Fetched data:", data["shoulder-stability"]);
       })
       .catch((err) => console.error("Fetch error:", err));
   }, []);
@@ -48,7 +48,7 @@ const LowerBackStability = () => {
         <>
           <div className="stability-page-header">
             <div className="text stability-page-title">
-              שיפור תפקוד גב תחתון
+              שיפור תפקוד חגורת כתפיים
             </div>
           </div>
           <div className="page-middle">
@@ -62,10 +62,8 @@ const LowerBackStability = () => {
                 {exercises[currExercise]["repeating-exercise"][0]}
               </div>
               <div className="text page-title">
-                {currExercise === 2
+                {currExercise === 4
                   ? "שניות"
-                  : currExercise === 4
-                  ? "דקה"
                   : "חזרות"}
               </div>
             </div>
@@ -105,7 +103,7 @@ const LowerBackStability = () => {
                   setHarderDifficulty(true);
                 }
               }}
-              style={{ visibility: currExercise !== 1 ? "hidden" : "visible" }}
+              style={{ visibility: "hidden"}}
               disabled = {popup}
             >
               {harderDifficulty
@@ -177,4 +175,4 @@ const LowerBackStability = () => {
   );
 };
 
-export default LowerBackStability;
+export default ShouldersStability;

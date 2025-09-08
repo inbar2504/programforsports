@@ -40,19 +40,44 @@ const ProgramPage = () => {
               תוכנית אימונים ריצה
             </p>
           </div>
-          <div className="program-sports" onClick = {() => {navigate("/power-exercies-start")}}>
+          <div
+            className="program-sports"
+            onClick={() => {
+              navigate("/power-exercies-start");
+            }}
+          >
             <p className="program-text">תוכנית אימונים כוח</p>
           </div>
-          <div className="program-sports" onClick={() => {navigate("/stability-exercises")}}>
+          <div
+            className="program-sports"
+            onClick={() => {
+              navigate("/stability-exercises");
+            }}
+          >
             <p className="program-text">תרגילי יציבות וחיזוק בסיסיים</p>
           </div>
-          <div className="program-sports" onClick = {() => {navigate("/stretching-program")}}>
+          <div
+            className="program-sports"
+            onClick={() => {
+              navigate("/stretching-program");
+            }}
+          >
             <p className="program-text">מתיחות</p>
           </div>
-          <div className="program-sports" onClick = {() => {navigate("/swimming-program")}}>
+          <div
+            className="program-sports"
+            onClick={() => {
+              navigate("/swimming-program");
+            }}
+          >
             <p className="program-text">שחייה</p>
           </div>
-          <div className="program-sports" onClick = {() => {navigate("/final-score-table")}}>
+          <div
+            className="program-sports"
+            onClick={() => {
+              navigate("/final-score-table");
+            }}
+          >
             <p className="program-text">סף כניסה-בוחן כש''ג</p>
           </div>
         </div>
@@ -68,18 +93,15 @@ const ProgramPage = () => {
             className="move-button"
             id="forward-btn"
           />
-
-          <img
+          <button
             src={backwardBtn}
             alt="continue"
             onClick={() => {
-              handleForward();
+              navigate("/end-page");
             }}
-            className="move-button"
+            className="end-button"
             id="backward-btn"
-            style={{ visibility: "hidden" }}
-
-          />
+          >סיימת? לחץ כאן!</button>
         </div>
       </div>
     </div>

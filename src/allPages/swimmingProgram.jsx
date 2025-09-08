@@ -43,7 +43,7 @@ const SwimmingProgram = () => {
       )}
       <div className="swimming-page-header">
         <div className="text page-title">שחייה</div>
-        <div className="text small-message">*מיועד רק למתגייסים ליחידת 669</div>
+        <div className="text swimming-small-message">*מיועד רק למתגייסים ליחידת 669</div>
       </div>
       <div className="page-middle">
         <div className="text text-box">

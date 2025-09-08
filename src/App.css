@@ -145,11 +145,12 @@ body {
   width: 50%;
 }
 
-.swimming-popup-text {
+.swimming-popup-text, .stability-text-popup {
   color: white;
   text-align: center;
   font-family: "aduma-medium";
-  font-size: clamp(1.2rem, 2.5vh, 3rem);
+  font-size: clamp(1.4rem, 2.5vh, 3rem);
+  padding-bottom: 3vh;
 }
 
 #important-text {
@@ -216,7 +217,14 @@ body {
 .move-button {
   width: 15%;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  height: 15%;
   border-radius: 50%;
+}
+
+.link-text{
+  font-family: "aduma-bold";
+  color: #0071bc;
+  text-decoration: underline;
 }
 
 #backward-btn {
@@ -295,7 +303,7 @@ body {
 .need-popup,
 .run-popup,
 .swimming-popup,
-.stretch-popup {
+.stretch-popup, .stability-window{
   z-index: 20;
   display: block;
   position: absolute;
@@ -336,6 +344,11 @@ body {
   margin-bottom: 5rem;
 }
 
+.stability-page-header{
+  margin-bottom: 2rem;
+  padding-right: 0%;
+}
+
 .page-header-power {
   margin-bottom: 0px;
 }
@@ -369,7 +382,6 @@ body {
 .stability-video {
   border-radius: 20px;
   border: 5px solid #0071bc;
-  margin-top: 5vh;
 }
 
 .exercise-number{
@@ -388,6 +400,10 @@ body {
   font-size: clamp(2rem, 3vh, 4rem);
 }
 
+.page-title{
+  text-align: center;
+}
+
 .stability-page-title{
   padding-top: 1rem;
 }
@@ -396,8 +412,17 @@ body {
   text-align: center;
 }
 
-.small-message {
-  font-size: clamp(1rem, 1.5vh, 1.5rem);
+.small-message, .swimming-small-message{
+  font-size: clamp(1.7rem, 1.5vh, 2rem);
+}
+
+.swimming-small-message{
+  color: #ff0000;
+}
+
+.end-button {
+  color: white;
+  font-size: clamp(1rem,2vh,2rem);
 }
 
 .slides-page {
@@ -676,7 +701,7 @@ button {
 }
 
 .running-popup,
-.download-btn, .stability-popup {
+.download-btn, .stability-popup, .stability-button{
   color: #0071bc;
   font-family: "aduma-medium";
   font-size: clamp(2rem, 3vh, 4rem);
@@ -684,6 +709,12 @@ button {
   height: 10vh;
   background-color: white;
   box-shadow: 0px 0px 20px 1px #0071bc;
+}
+
+.stability-button{
+  margin-top: 1.5vh;
+  width: 43vw;
+  height: 13vh;
 }
 
 .stability-popup {
@@ -838,6 +869,9 @@ button {
   }
    .power-exercises-header {
     margin-bottom: 4rem;
+  }
+  .stability-page-header{
+    margin-bottom: 1rem;
   }
 }
 

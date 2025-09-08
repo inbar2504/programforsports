@@ -27,8 +27,12 @@ const StabilityExercises = () => {
           >
             שיפור תפקוד גב תחתון
           </button>
-          <button className="stability-popup">שיפור תפקוד חגורת כתפיים</button>
-          <button className="stability-popup">
+          <button className="stability-popup" onClick={() => {
+            navigate("/shoulders-stability");
+          }}>שיפור תפקוד חגורת כתפיים</button>
+          <button className="stability-popup" onClick={() => {
+            navigate("/foot-stability");
+          }}>
             שיפור תפקוד הקרסול, שוק וכף הרגל
           </button>
         </div>

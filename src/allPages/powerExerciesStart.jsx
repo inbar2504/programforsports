@@ -99,6 +99,7 @@ const PowerExerciesStart = () => {
               </li>
             ))}
           </ul>
+          <a className="text" href="https://docs.google.com/spreadsheets/d/1Qz5ZOze7Ab064SUlp96yw597QwQDtEKFttmqMwjJHPY/copy">לטבלת חישוב תוצאות</a>
         </div>
       </div>
 

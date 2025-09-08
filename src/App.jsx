@@ -14,6 +14,8 @@ import PowerExerciesStart from "./allPages/powerExerciesStart";
 import PowerExercisesWeeks from "./allPages/powerExercisesWeeks";
 import StabilityExercises from "./allPages/stabilityExercises";
 import LowerBackStability from "./allPages/lowerBackStability";
+import ShouldersStability from "./allPages/shouldersStability";
+import FootStability from "./allPages/footStability";
 
 function App() {
   return (
@@ -35,6 +37,8 @@ function App() {
             <Route path="/power-exercises-weeks" element = {<PowerExercisesWeeks/>}/>
             <Route path = "/stability-exercises" element= {<StabilityExercises/>}/>
             <Route path="/lower-back-stability" element={<LowerBackStability/>}/>
+            <Route path = "/shoulders-stability" element = {<ShouldersStability/>}/>
+            <Route path="/foot-stability" element={<FootStability/>}/>
           </Routes>
         </header>
       </div>
