@@ -715,6 +715,7 @@ button {
   margin-top: 1.5vh;
   width: 43vw;
   height: 13vh;
+  z-index: 20;
 }
 
 .stability-popup {
