@@ -83,7 +83,7 @@ const ProgramPage = () => {
         </div>
 
         {/* buttons */}
-        <div className="buttons-move">
+        <div className="programs-buttons-move">
           <img
             src={forwardBtn}
             alt="continue"
@@ -99,8 +99,7 @@ const ProgramPage = () => {
             onClick={() => {
               navigate("/end-page");
             }}
-            className="end-button"
-            id="backward-btn"
+            className="programs-end-button"
           >סיימת? לחץ כאן!</button>
         </div>
       </div>

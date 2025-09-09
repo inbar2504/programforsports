@@ -63,20 +63,26 @@ const FootStability = () => {
               </div>
               <div className="text page-title">
                 {currExercise === 4
-                  ? "שניות" :
-                  currExercise === 6 
-                  ? "בצע עד שתחוש בעייפות" :
-                  currExercise === 7 
-                  ? "מטרים" :
-                  "חזרות"
-                }
+                  ? "שניות"
+                  : currExercise === 6
+                  ? "בצע עד שתחוש בעייפות"
+                  : currExercise === 7
+                  ? "מטרים"
+                  : "חזרות"}
               </div>
             </div>
             <div className="text stability-text">
               <div className="exercise-number">
                 {exercises[currExercise]["sets-number"][0]}
               </div>
-              <div className="text page-title" style={{visibility: currExercise === 6 ? "hidden" : "visible"}}>סטים</div>
+              <div
+                className="text page-title"
+                style={{
+                  visibility: currExercise === 6 ? "hidden" : "visible",
+                }}
+              >
+                סטים
+              </div>
             </div>
             <iframe
               width="250px"
@@ -108,8 +114,15 @@ const FootStability = () => {
                   setHarderDifficulty(true);
                 }
               }}
-              style={{ visibility: currExercise === 2 ? "visible" : currExercise === 4 ? "visible" : "hidden"}}
-              disabled = {popup}
+              style={{
+                visibility:
+                  currExercise === 2
+                    ? "visible"
+                    : currExercise === 4
+                    ? "visible"
+                    : "hidden",
+              }}
+              disabled={popup}
             >
               {harderDifficulty
                 ? "לרמת קושי בינונית לחצו"
@@ -117,16 +130,18 @@ const FootStability = () => {
             </button>
           </div>
           {popup && (
-            <div className="stability-window">
-              <img
-                src={closeBtn}
-                className="close-btn"
-                onClick={() => {
-                  setPopup(false);
-                }}
-              />
-              <div className="text stability-text-popup">
-                {exercises[currExercise]["exercise-instructions"][0]}
+            <div className="stability-overlay">
+              <div className="stability-window">
+                <img
+                  src={closeBtn}
+                  className="close-btn"
+                  onClick={() => {
+                    setPopup(false);
+                  }}
+                />
+                <div className="text stability-text-popup">
+                  {exercises[currExercise]["exercise-instructions"][0]}
+                </div>
               </div>
             </div>
           )}

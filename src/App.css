@@ -45,7 +45,7 @@ body {
   text-align: center;
 }
 
-.start-page {
+.start-page, .ending-page-content {
   width: 100vw;
   height: 100vh;
   background-image: url("media/homepageBg.png");
@@ -231,7 +231,7 @@ body {
   margin-right: 70%;
 }
 
-.buttons-move {
+.buttons-move, .programs-buttons-move{
   width: 90%;
   display: flex;
   text-align: center;
@@ -240,6 +240,10 @@ body {
   bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.programs-buttons-move{
+  align-items: center;
 }
 
 .page-content,
@@ -317,6 +321,37 @@ body {
   border: 2px solid white;
 }
 
+.stability-window {
+  z-index: 100;
+  pointer-events: auto;
+}
+.stability-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3); /* dim background */
+  z-index: 9998;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.programs-end-button {
+  width: 45%;
+  padding: 0.2rem 0.5rem;
+  background-color: #0071bc;
+  border: 3px solid white;
+  border-radius: 100px;
+  color: white;
+  font-family: "aduma-regular";
+  font-size: 1.5rem;
+  box-shadow: 0px 0px 20px 5px #0071bc;
+  margin-right: 40%;
+}
+
 #need-text {
   text-align: center;
 }
@@ -335,7 +370,7 @@ body {
 .swimming-page-header,
 .page-header-stretches,
 .score-page-header,
-.page-header-power-exercises, .power-exercises-header, .stability-page-header {
+.page-header-power-exercises, .power-exercises-header, .stability-page-header, .ending-page-header {
   padding-top: 3vh;
   padding-right: 5vw;
   display: flex;
@@ -363,8 +398,50 @@ body {
   padding-right: 0vw;
 }
 
-.page-header-running-start {
+.ending-board{
+  border: 4px solid #0071bc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 90%;
+  height: 35%;
+  border-radius: 20px;
+  background-color: white;
+  justify-content: center;
+}
+
+.whatsapp-link{
+  text-align: center;
+}
+
+.whatsapp-icon{
+  width: 40%;
+  border-radius: 50px;
+  animation-name: stretchImgsAnimation;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  margin-bottom: 1rem;
+}
+
+.page-header-running-start, .ending-page-header {
   padding-right: 0px;
+}
+
+.ending-page-title{
+  font-family: "aduma-bold";
+  text-align: center;
+  font-size: clamp(3rem,3.5vh,4rem);
+}
+
+.ending-small-message{
+  margin-top: 10vh;
+  font-size: clamp(2.5rem,3.5vh,3rem);
+}
+
+.ending-page-header{
+  margin-top: 6vh;
 }
 
 .running-header,

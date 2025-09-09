@@ -62,9 +62,7 @@ const ShouldersStability = () => {
                 {exercises[currExercise]["repeating-exercise"][0]}
               </div>
               <div className="text page-title">
-                {currExercise === 4
-                  ? "שניות"
-                  : "חזרות"}
+                {currExercise === 4 ? "שניות" : "חזרות"}
               </div>
             </div>
             <div className="text stability-text">
@@ -103,8 +101,8 @@ const ShouldersStability = () => {
                   setHarderDifficulty(true);
                 }
               }}
-              style={{ visibility: "hidden"}}
-              disabled = {popup}
+              style={{ visibility: "hidden" }}
+              disabled={popup}
             >
               {harderDifficulty
                 ? "לרמת קושי בינונית לחצו"
@@ -112,16 +110,18 @@ const ShouldersStability = () => {
             </button>
           </div>
           {popup && (
-            <div className="stability-window">
-              <img
-                src={closeBtn}
-                className="close-btn"
-                onClick={() => {
-                  setPopup(false);
-                }}
-              />
-              <div className="text stability-text-popup">
-                {exercises[currExercise]["exercise-instructions"][0]}
+            <div className="stability-overlay">
+              <div className="stability-window">
+                <img
+                  src={closeBtn}
+                  className="close-btn"
+                  onClick={() => {
+                    setPopup(false);
+                  }}
+                />
+                <div className="text stability-text-popup">
+                  {exercises[currExercise]["exercise-instructions"][0]}
+                </div>
               </div>
             </div>
           )}

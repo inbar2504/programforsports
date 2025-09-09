@@ -43,7 +43,9 @@ const LowerBackStability = () => {
   };
 
   return (
-    <div className="lower-back-stability-content">
+    <div
+      className={`lower-back-stability-content ${popup ? "popup-open" : ""}`}
+    >
       {exercises.length > 0 ? (
         <>
           <div className="stability-page-header">
@@ -106,7 +108,7 @@ const LowerBackStability = () => {
                 }
               }}
               style={{ visibility: currExercise !== 1 ? "hidden" : "visible" }}
-              disabled = {popup}
+              disabled={popup}
             >
               {harderDifficulty
                 ? "לרמת קושי בינונית לחצו"
@@ -114,16 +116,18 @@ const LowerBackStability = () => {
             </button>
           </div>
           {popup && (
-            <div className="stability-window">
-              <img
-                src={closeBtn}
-                className="close-btn"
-                onClick={() => {
-                  setPopup(false);
-                }}
-              />
-              <div className="text stability-text-popup">
-                {exercises[currExercise]["exercise-instructions"][0]}
+            <div className="stability-overlay">
+              <div className="stability-window">
+                <img
+                  src={closeBtn}
+                  className="close-btn"
+                  onClick={() => {
+                    setPopup(false);
+                  }}
+                />
+                <div className="text stability-text-popup">
+                  {exercises[currExercise]["exercise-instructions"][0]}
+                </div>
               </div>
             </div>
           )}

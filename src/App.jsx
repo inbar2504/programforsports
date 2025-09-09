@@ -16,6 +16,7 @@ import StabilityExercises from "./allPages/stabilityExercises";
 import LowerBackStability from "./allPages/lowerBackStability";
 import ShouldersStability from "./allPages/shouldersStability";
 import FootStability from "./allPages/footStability";
+import EndingPage from "./allPages/endingPage";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
             <Route path="/lower-back-stability" element={<LowerBackStability/>}/>
             <Route path = "/shoulders-stability" element = {<ShouldersStability/>}/>
             <Route path="/foot-stability" element={<FootStability/>}/>
+            <Route path="/end-page" element={<EndingPage/>}/>
           </Routes>
         </header>
       </div>
