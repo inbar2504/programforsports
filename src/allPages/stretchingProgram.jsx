@@ -134,7 +134,7 @@ const StretchingProgram = () => {
       )}
       <div className="page-header-stretches">
         <div className="text page-title">מתיחות</div>
-        <div className="text small-message">לחץ לפירוט</div>
+        <div className="text small-message">לחץ על התמונה לפירוט</div>
       </div>
       <div className="page-middle-stretches">
         <div className="text page-title">{titles[currPage]}</div>

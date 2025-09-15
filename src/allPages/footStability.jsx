@@ -116,9 +116,9 @@ const FootStability = () => {
               }}
               style={{
                 visibility:
-                  currExercise === 2
+                  currExercise === 1
                     ? "visible"
-                    : currExercise === 4
+                    : currExercise === 3
                     ? "visible"
                     : "hidden",
               }}
