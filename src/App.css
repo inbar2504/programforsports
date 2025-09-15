@@ -547,9 +547,8 @@ body {
   font-family: "aduma-medium";
   text-align: center;
   width: 65%;
-  height: 65vh;
-  min-height: 75vh;
-  max-height: 80vh;
+  min-height: 72vh;
+  max-height: 78vh;
   background-color: white;
   border: 5px solid #0071bc;
   border-radius: 50px;
