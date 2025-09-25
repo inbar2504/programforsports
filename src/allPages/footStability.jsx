@@ -62,11 +62,11 @@ const FootStability = () => {
                 {exercises[currExercise]["repeating-exercise"][0]}
               </div>
               <div className="text page-title">
-                {currExercise === 4
+                {currExercise === 3
                   ? "שניות"
-                  : currExercise === 6
+                  : currExercise === 5
                   ? "בצע עד שתחוש בעייפות"
-                  : currExercise === 7
+                  : currExercise === 6
                   ? "מטרים"
                   : "חזרות"}
               </div>
@@ -78,7 +78,7 @@ const FootStability = () => {
               <div
                 className="text page-title"
                 style={{
-                  visibility: currExercise === 6 ? "hidden" : "visible",
+                  visibility: currExercise === 5 ? "hidden" : "visible",
                 }}
               >
                 סטים
@@ -188,7 +188,7 @@ const FootStability = () => {
           alt="next"
           className="move-button"
           id="backward-btn"
-          style={{ visibility: currExercise === 7 ? "hidden" : "visible" }}
+          style={{ visibility: currExercise === 6 ? "hidden" : "visible" }}
         />
       </div>
     </div>

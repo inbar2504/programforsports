@@ -215,7 +215,7 @@ body {
 }
 
 .move-button {
-  z-index: 100;
+  z-index: 11;
   width: 15%;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   height: 15%;
@@ -320,6 +320,11 @@ body {
   height: auto;
   background-color: #333333;
   border: 2px solid white;
+}
+
+#table-link{
+  z-index: 13;
+  color: #0071bc;
 }
 
 .stability-window {
@@ -792,6 +797,10 @@ button {
   height: 10vh;
   background-color: white;
   box-shadow: 0px 0px 20px 1px #0071bc;
+}
+
+.running-popup{
+  z-index: 12;
 }
 
 .stability-button{
