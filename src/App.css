@@ -229,6 +229,7 @@ body {
 }
 
 #backward-btn {
+  z-index: 11;
   margin-right: 70%;
 }
 
@@ -242,6 +243,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
 }
+
 
 .programs-buttons-move{
   align-items: center;
@@ -275,7 +277,7 @@ body {
 .things-to-know,
 .programs,
 .all-weeks {
-  z-index: 2;
+  z-index: 21;
   display: flex;
   flex-direction: column;
   color: white;
@@ -309,7 +311,7 @@ body {
 .run-popup,
 .swimming-popup,
 .stretch-popup, .stability-window{
-  z-index: 20;
+  z-index: 22;
   display: block;
   position: absolute;
   left: 50%;
@@ -323,7 +325,7 @@ body {
 }
 
 #table-link{
-  z-index: 13;
+  z-index: 22;
   color: #0071bc;
 }
 
@@ -421,6 +423,14 @@ body {
   text-align: center;
 }
 
+.buttons-move{
+  z-index: 20;
+}
+
+#forward-btn,#backward-btn{
+  z-index: 20;
+}
+
 .whatsapp-icon{
   width: 40%;
   border-radius: 50px;
@@ -503,6 +513,10 @@ body {
   color: #ff0000;
 }
 
+#forward-btn{
+  z-index: 11;
+}
+
 .end-button {
   color: white;
   font-size: clamp(1rem,2vh,2rem);
@@ -552,6 +566,7 @@ body {
 }
 
 .slide {
+  
   font-family: "aduma-medium";
   text-align: center;
   width: 65%;
@@ -569,7 +584,10 @@ body {
   gap: 2rem;
   box-sizing: border-box;
   overflow: hidden;
+  z-index: 1;
 }
+
+
 
 .slide-title,
 .slide-title-power {
@@ -588,6 +606,7 @@ body {
   align-items: center;
   height: 80vh;
   position: relative; /* anchor the buttons here */
+  z-index: 1;
 }
 
 .swiper .swiper-slide {
