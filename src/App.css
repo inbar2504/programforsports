@@ -384,7 +384,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 .stability-page-header{
@@ -820,14 +820,14 @@ button {
 }
 
 .running-popup{
-  z-index: 12;
+  z-index: 29;
 }
 
 .stability-button{
   margin-top: 1.5vh;
   width: 43vw;
   height: 13vh;
-  z-index: 20;
+  z-index: 30;
 }
 
 .stability-popup {
@@ -953,7 +953,7 @@ button {
 @media (min-width: 375px) and (max-width: 376px) {
   /* iPhone SE width */
   .page-header {
-    margin-bottom: 4rem;
+    margin-bottom:2rem;
   }
   .slide {
     height: 70vh;
