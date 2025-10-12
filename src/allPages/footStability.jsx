@@ -65,7 +65,7 @@ const FootStability = () => {
                 {currExercise === 3
                   ? "שניות"
                   : currExercise === 5
-                  ? "בצע עד שתחוש בעייפות"
+                  ? ""
                   : currExercise === 6
                   ? "מטרים"
                   : "חזרות"}

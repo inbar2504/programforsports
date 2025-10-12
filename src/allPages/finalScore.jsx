@@ -15,7 +15,6 @@ const FinalScorePage = () => {
     <div className="final-score-page">
       <div className="score-page-header">
         <div className="text page-title">סף כניסה</div>
-        <div className="text small-message">סף כניסה</div>
       </div>
       <div className="page-middle">
         <ul className="score-indicators">
